@@ -1,0 +1,2871 @@
+{
+    "variables": [],
+    "info": {
+        "name": "Laravel API",
+        "_postman_id": "0790ad92-a14b-4701-b361-62368dcf2d58",
+        "description": "\r\n        \r\n        \r\n        dsadsadsadsadsa\r\n        \r\n        ",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Admin/B\u00e1o c\u00e1o s\u1ef1 c\u1ed1",
+            "description": "\nAPIs B\u00e1o c\u00e1o s\u1ef1 c\u1ed1",
+            "item": [
+                {
+                    "name": "Danh s\u00e1ch b\u00e1o c\u00e1o s\u1ef1 c\u1ed1",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/report_problem",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"date_from\": \"aspernatur\",\n    \"date_to\": \"occaecati\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Admin/Qu\u1ea3n l\u00fd/B\u00e0i \u0111\u0103ng t\u00ecm ph\u00f2ng tr\u1ecd",
+            "description": "",
+            "item": [
+                {
+                    "name": "Danh c\u00e1ch ph\u00f2ng \u0111\u0103ng t\u00ecm ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/mo_posts",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin b\u00e0i \u0111\u0103ng t\u00ecm",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/mo_posts/:post_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/mo_posts/:post_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Admin/Qu\u1ea3n l\u00fd/D\u1ecbch v\u1ee5 b\u00e1n",
+            "description": "",
+            "item": [
+                {
+                    "name": "Danh s\u00e1ch d\u1ecbch v\u1ee5 b\u00e1n",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/service_sells",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/service_sells/:service_sell_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/service_sells/:service_sell_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Th\u00eam d\u1ecbch v\u1ee5 b\u00e1n",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/service_sells",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1eadp nh\u1eadt 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/service_sells/:service_sell_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Admin/Qu\u1ea3n l\u00fd/Ph\u00f2ng tr\u1ecd",
+            "description": "",
+            "item": [
+                {
+                    "name": "Danh c\u00e1ch ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/motels",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin 1 ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/motels/:motel_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/motels/:motel_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Admin/Qu\u1ea3n l\u00fd/User",
+            "description": "",
+            "item": [
+                {
+                    "name": "Danh s\u00e1ch user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/users",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"omnis\",\n    \"number_phone\": \"et\",\n    \"email\": \"dolorem\",\n    \"date_from\": \"recusandae\",\n    \"date_to\": \"voluptates\",\n    \"descending\": true,\n    \"sort_by\": \"maxime\",\n    \"limit\": 11\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin 1 user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/users/:user_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1ea5p ch\u1ee7 nh\u00e0",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/admin/users/:user_id/set_host",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Bill/H\u00f3a \u0111\u01a1n (1 ph\u00f2ng)",
+            "description": "",
+            "item": [
+                {
+                    "name": "Th\u00eam 1 h\u00f3a \u0111\u01a1n",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/bills",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"contract_id\": 16,\n    \"date_payment\": \"ex\",\n    \"total_money_motel\": 295,\n    \"total_money_service\": 6847.739913,\n    \"discount\": 16.2727,\n    \"deposit_money\": 1953.87,\n    \"services\": [],\n    \"total_final\": 5457.97553\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api/user/manage/bills",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/bills",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "L\u1ea5y 1 h\u00f3a \u0111\u01a1n",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/bills/:bill_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "bill_id",
+                                    "key": "bill_id",
+                                    "value": "qui",
+                                    "description": "int t\u00ecm h\u00f3a \u0111\u01a1n theo m\u00e3"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "S\u1eeda 1 h\u00f3a \u0111\u01a1n",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/bills/:bill_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"service_close_id\": 10,\n    \"date_payment\": \"molestias\",\n    \"total_money_motel\": 4.09736,\n    \"total_money_service\": 0,\n    \"discount\": 117.238,\n    \"services\": [],\n    \"total_final\": 2820.420775274\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "N\u01a1i ch\u1ed1n",
+            "description": "",
+            "item": [
+                {
+                    "name": "L\u1ea5y danh s\u00e1ch v\u00f9ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/place/vn/:type/:parent_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "ut",
+                                    "description": "m\u1ee5c c\u1ea7n l\u1ea5y (  province(t\u1ec9nh,th\u00e0nh ph\u1ed1) | district(qu\u1eadn,huy\u1ec7n) | wards(ph\u01b0\u1eddng,x\u00e3))"
+                                },
+                                {
+                                    "id": "parent_id",
+                                    "key": "parent_id",
+                                    "value": "reprehenderit",
+                                    "description": "id m\u1ee5c cha, ri\u00eang province c\u00f3 th\u1ec3 kh\u00f4ng c\u1ea7n"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "L\u1ea5y danh s\u00e1ch v\u00f9ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/place/vn/:type",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "sed",
+                                    "description": "m\u1ee5c c\u1ea7n l\u1ea5y (  province(t\u1ec9nh,th\u00e0nh ph\u1ed1) | district(qu\u1eadn,huy\u1ec7n) | wards(ph\u01b0\u1eddng,x\u00e3))"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Upload video",
+            "description": "",
+            "item": [
+                {
+                    "name": "Upload 1 video",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/videos",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"video\": \"quod\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Upload \u1ea3nh",
+            "description": "",
+            "item": [
+                {
+                    "name": "Upload 1 \u1ea3nh",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/images",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"image\": \"quia\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/Chat",
+            "description": "",
+            "item": [
+                {
+                    "name": "Danh s\u00e1ch ng\u01b0\u1eddi chat v\u1edbi user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/person_chat",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh s\u00e1ch tin nh\u1eafn v\u1edbi 1 ng\u01b0\u1eddi",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/person_chat/:to_user_id/messages",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"content\": \"incidunt\",\n    \"images\": \"porro\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "G\u1eedi tin nh\u1eafn",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/person_chat/:to_user_id/messages",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"content\": \"nihil\",\n    \"images\": \"natus\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/Ch\u1ec9 s\u1ed1",
+            "description": "",
+            "item": [
+                {
+                    "name": "L\u1ea5y t\u1ea5t c\u1ea3 ch\u1ec9 s\u1ed1 \u0111\u1ebfm",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/badges",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "Kh\u00e1ch h\u00e0ng chat cho user\nNh\u1eadn badges realtime\nvar socket = io(\"http://localhost:6441\")\nsocket.on(\"badges:badges_user:1\", function(data) {\n  console.log(data)\n  })\n 1 l\u00e0 user_id",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "ch\u1ec9 s\u1ed1 v\u1ec1 motel",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/summary_motel",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/C\u1ed9ng \u0111\u1ed3ng/B\u00e1o c\u00e1o S\u1ef1 c\u1ed1",
+            "description": "",
+            "item": [
+                {
+                    "name": "T\u1ea1o 1 b\u00e1o c\u00e1o s\u1ef1 c\u1ed1",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/report_problem",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": \"neque\",\n    \"motel_id\": \"quia\",\n    \"reason\": \"hic\",\n    \"describe_problem\": \"laboriosam\",\n    \"status\": 11,\n    \"severity\": 3\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh s\u00e1ch b\u00e1o c\u00e1o s\u1ef1 c\u1ed1",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/report_problem",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"date_from\": \"et\",\n    \"date_to\": \"vitae\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "L\u1ea5y 1 b\u00e1o c\u00e1o s\u1ef1 c\u1ed1",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/report_problem/:report_problem_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "report_problem_id",
+                                    "key": "report_problem_id",
+                                    "value": "velit",
+                                    "description": "int M\u00e3 b\u00e1o c\u00e1o s\u1ef1 c\u1ed1"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 b\u00e1o c\u00e1o s\u1ef1 c\u1ed1",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/report_problem/:report_problem_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "report_problem_id",
+                                    "key": "report_problem_id",
+                                    "value": "commodi",
+                                    "description": "int M\u00e3 b\u00e1o c\u00e1o s\u1ef1 c\u1ed1"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1eadp nh\u1eadt 1 b\u00e1o c\u00e1o s\u1ef1 c\u1ed1",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/report_problem/:report_problem_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"reason\": \"fugit\",\n    \"describe_problem\": \"eos\",\n    \"status\": 13\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/C\u1ed9ng \u0111\u1ed3ng/C\u1ed9ng \u0111\u1ed3ng t\u00ecm ph\u00f2ng",
+            "description": "",
+            "item": [
+                {
+                    "name": "Danh c\u00e1ch ph\u00f2ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/mo_posts",
+                            "query": [
+                                {
+                                    "key": "title",
+                                    "value": "quo",
+                                    "description": "t\u00ecm theo ti\u00eau \u0111\u1ec1",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "money_from",
+                                    "value": "aperiam",
+                                    "description": "ti\u1ec1n t\u1ed1i thi\u1ec3u",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "money_to",
+                                    "value": "architecto",
+                                    "description": "ti\u1ec1n t\u1ed1i \u0111a",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "province",
+                                    "value": "ut",
+                                    "description": "t\u1ec9nh",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "district",
+                                    "value": "optio",
+                                    "description": "qu\u1eadn",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "wards",
+                                    "value": "tenetur",
+                                    "description": "huy\u1ec7n",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "sex",
+                                    "value": "est",
+                                    "description": "gi\u1edbi t\u00ednh",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "has",
+                                    "value": "omnis",
+                                    "description": "boolean t\u1ea5t c\u1ea3 field c\u00f3 ki\u1ec3u bool",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "sort_by",
+                                    "value": "qui",
+                                    "description": "string t\u00ean column",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "descending",
+                                    "value": "sit",
+                                    "description": "boolean",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Th\u00f4ng tin 1 ph\u00f2ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/mo_posts/:mo_post_id",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "perspiciatis",
+                                    "description": "ph\u00f2ng c\u1ea7n xem",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/C\u1ed9ng \u0111\u1ed3ng/Gi\u1ecf h\u00e0ng",
+            "description": "",
+            "item": [
+                {
+                    "name": "Th\u00eam sp v\u00e0o gi\u1ecf",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/cart_service_sells",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"service_sell_id\": 7,\n    \"quantity\": 12\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh s\u00e1ch s\u1ea3n ph\u1ea9m trong gi\u1ecf h\u00e0ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/cart_service_sells",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a sp kh\u1ecfi gi\u1ecf",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/cart_service_sells/:cart_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"cart_id\": 10\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1eadp nh\u1eadt s\u1ed1 l\u01b0\u1ee3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/cart_service_sells/:cart_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"cart_id\": 6,\n    \"quantity\": 15\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/C\u1ed9ng \u0111\u1ed3ng/H\u1ee3p \u0111\u1ed3ng",
+            "description": "",
+            "item": [
+                {
+                    "name": "Th\u00eam 1 h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/contracts",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"rental_agent\": \"at\",\n    \"motel_id\": 17,\n    \"money\": 0.16,\n    \"rent_from\": \"et\",\n    \"rent_to\": \"totam\",\n    \"pay_start\": \"soluta\",\n    \"payment_space\": 18,\n    \"deposit_money\": 62262.21058,\n    \"list_renter\": \"ipsum\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh c\u00e1ch h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/contracts",
+                            "query": [
+                                {
+                                    "key": "contract_status",
+                                    "value": "veniam",
+                                    "description": "int (2 \u0111ang ho\u1ea1t \u0111\u1ed9ng,1 qu\u00e1 h\u1ea1n, 0 \u0111\u00e3 thanh l\u00fd,3 s\u1eafp h\u1ebft h\u1ea1n trong v\u00f2ng 1 th\u00e1ng )",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin 1 h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/contracts/:contract_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/contracts/:contract_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1eadp nh\u1eadt 1 h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/contracts/:contract_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"rental_agent\": \"ea\",\n    \"motel_id\": 1,\n    \"money\": 1751561.831651,\n    \"rent_from\": \"iste\",\n    \"rent_to\": \"magni\",\n    \"pay_start\": \"unde\",\n    \"payment_space\": 8,\n    \"deposit_money\": 10737.53354\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/C\u1ed9ng \u0111\u1ed3ng/Ph\u00f2ng y\u00eau th\u00edch",
+            "description": "",
+            "item": [
+                {
+                    "name": "Danh c\u00e1ch ph\u00f2ng y\u00eau th\u00edch",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/favorite_mo_posts",
+                            "query": [
+                                {
+                                    "key": "title",
+                                    "value": "ipsum",
+                                    "description": "t\u00ecm theo ti\u00eau \u0111\u1ec1",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "money_from",
+                                    "value": "consequuntur",
+                                    "description": "ti\u1ec1n t\u1ed1i thi\u1ec3u",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "money_to",
+                                    "value": "voluptas",
+                                    "description": "ti\u1ec1n t\u1ed1i \u0111a",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "province",
+                                    "value": "sit",
+                                    "description": "t\u1ec9nh",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "district",
+                                    "value": "eum",
+                                    "description": "qu\u1eadn",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "wards",
+                                    "value": "error",
+                                    "description": "huy\u1ec7n",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "sex",
+                                    "value": "odio",
+                                    "description": "gi\u1edbi t\u00ednh",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "has",
+                                    "value": "odio",
+                                    "description": "boolean t\u1ea5t c\u1ea3 field c\u00f3 ki\u1ec3u bool",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Y\u00eau th\u00edch 1 ph\u00f2ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/favorite_mo_posts/:mo_post_id",
+                            "query": [
+                                {
+                                    "key": "is_favorite",
+                                    "value": "alias",
+                                    "description": "y\u00eau th\u00edch hay kh\u00f4ng",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/C\u1ed9ng \u0111\u1ed3ng/\u0110\u01a1n h\u00e0ng",
+            "description": "",
+            "item": [
+                {
+                    "name": "\u0110\u1eb7t h\u00e0ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/order_service_sells/send",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"phone_number\": \"amet\",\n    \"name\": \"fugiat\",\n    \"province\": \"quas\",\n    \"district\": \"beatae\",\n    \"wards\": \"officia\",\n    \"email\": \"voluptatem\",\n    \"phone\": \"id\",\n    \"address_detail\": \"officiis\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh s\u00e1ch \u0111\u01a1n h\u00e0ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/order_service_sells",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/Device token",
+            "description": "",
+            "item": [
+                {
+                    "name": "\u0110\u0103ng k\u00fd device token",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/device_token_user",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"device_id\": \"et\",\n    \"device_type\": \"temporibus\",\n    \"device_token\": \"aut\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/Qu\u1ea3n l\u00fd/B\u00e0i \u0111\u0103ng t\u00ecm ph\u00f2ng tr\u1ecd",
+            "description": "",
+            "item": [
+                {
+                    "name": "Danh c\u00e1ch ph\u00f2ng \u0111\u0103ng t\u00ecm ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/mo_posts",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin b\u00e0i \u0111\u0103ng t\u00ecm",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/mo_posts/:post_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/mo_posts/:post_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/Qu\u1ea3n l\u00fd/B\u00e1o c\u00e1o th\u1ed1ng k\u00ea",
+            "description": "",
+            "item": [
+                {
+                    "name": "L\u1ea5y b\u00e1o c\u00e1o doanh thu theo n\u0103m",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/overview",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"date_from\": \"repellat\",\n    \"date_to\": \"magnam\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/Qu\u1ea3n l\u00fd/H\u1ee3p \u0111\u1ed3ng",
+            "description": "",
+            "item": [
+                {
+                    "name": "Th\u00eam 1 h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/contracts",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"rental_agent\": \"atque\",\n    \"motel_id\": 6,\n    \"money\": 1711864.6,\n    \"rent_from\": \"odio\",\n    \"rent_to\": \"unde\",\n    \"pay_start\": \"nostrum\",\n    \"payment_space\": 16,\n    \"deposit_money\": 37341752.45,\n    \"list_renter\": \"ullam\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh c\u00e1ch h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/contracts",
+                            "query": [
+                                {
+                                    "key": "contract_status",
+                                    "value": "nobis",
+                                    "description": "int (2 \u0111ang ho\u1ea1t \u0111\u1ed9ng,1 qu\u00e1 h\u1ea1n, 0 \u0111\u00e3 thanh l\u00fd )",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin 1 h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/contracts/:contract_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/contracts/:contract_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1eadp nh\u1eadt 1 h\u1ee3p \u0111\u1ed3ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/contracts/:contract_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"rental_agent\": \"nobis\",\n    \"motel_id\": 7,\n    \"money\": 27.2429,\n    \"rent_from\": \"repellendus\",\n    \"rent_to\": \"aspernatur\",\n    \"pay_start\": \"fugiat\",\n    \"payment_space\": 12,\n    \"deposit_money\": 12.195\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/Qu\u1ea3n l\u00fd/Ng\u01b0\u1eddi thu\u00ea",
+            "description": "",
+            "item": [
+                {
+                    "name": "Th\u00eam 1 ng\u01b0\u1eddi thu\u00ea",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/renters",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"similique\",\n    \"phone_number\": \"cupiditate\",\n    \"email\": \"molestias\",\n    \"cmnd_number\": \"magnam\",\n    \"cmnd_front_image_url\": \"tenetur\",\n    \"cmnd_back_image_url\": \"velit\",\n    \"address\": \"doloribus\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh c\u00e1ch ng\u01b0\u1eddi thu\u00ea",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/renters",
+                            "query": [
+                                {
+                                    "key": "renter_status",
+                                    "value": "voluptatibus",
+                                    "description": "int (0 ch\u01b0a c\u00f3 ph\u00f2ng,2 \u0111ang thu\u00ea, 1 \u0111\u00e3 thanh l\u00fd )",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin 1 ng\u01b0\u1eddi thu\u00ea",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/renters/:renter_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 ng\u01b0\u1eddi thu\u00ea",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/renters/:renter_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1eadp nh\u1eadt 1 ng\u01b0\u1eddi thu\u00ea",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/renters/:renter_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"et\",\n    \"phone_number\": \"aut\",\n    \"email\": \"saepe\",\n    \"cmnd_number\": \"nobis\",\n    \"cmnd_front_image_url\": \"odit\",\n    \"cmnd_back_image_url\": \"natus\",\n    \"address\": \"facilis\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/Qu\u1ea3n l\u00fd/Ph\u00f2ng tr\u1ecd",
+            "description": "",
+            "item": [
+                {
+                    "name": "Th\u00eam 1 ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/motels",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"list_service_id\": [],\n    \"type\": 5,\n    \"status\": 11,\n    \"phone_number\": \"cupiditate\",\n    \"title\": \"omnis\",\n    \"description\": \"ut\",\n    \"motel_name\": 9,\n    \"capacity\": 11,\n    \"sex\": 19,\n    \"area\": 254449240.6949,\n    \"money\": 3.197,\n    \"deposit\": 7049.5,\n    \"electric_money\": 267.235,\n    \"water_money\": 635112,\n    \"has_wifi\": \"eligendi\",\n    \"wifi_money\": \"in\",\n    \"has_park\": \"quidem\",\n    \"park_money\": \"soluta\",\n    \"province\": \"nobis\",\n    \"district\": \"recusandae\",\n    \"wards\": \"consectetur\",\n    \"address_detail\": \"consequuntur\",\n    \"has_wc\": \"facere\",\n    \"has_window\": \"et\",\n    \"has_security\": \"a\",\n    \"has_free_move\": \"enim\",\n    \"has_own_owner\": \"recusandae\",\n    \"has_air_conditioner\": \"atque\",\n    \"has_water_heater\": \"porro\",\n    \"has_kitchen\": \"qui\",\n    \"has_fridge\": \"eligendi\",\n    \"has_washing_machine\": \"eum\",\n    \"has_mezzanine\": \"nam\",\n    \"has_bed\": \"et\",\n    \"has_wardrobe\": \"velit\",\n    \"has_tivi\": \"quae\",\n    \"has_pet\": \"veritatis\",\n    \"has_balcony\": \"omnis\",\n    \"hour_open\": \"autem\",\n    \"minute_open\": \"ad\",\n    \"hour_close\": \"consequatur\",\n    \"minute_close\": \"dolores\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh c\u00e1ch ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/motels",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin 1 ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/motels/:motel_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/motels/:motel_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1eadp nh\u1eadt 1 ph\u00f2ng tr\u1ecd",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/motels/:motel_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"list_mo_service_id\": [],\n    \"type\": 13,\n    \"status\": 16,\n    \"phone_number\": \"nesciunt\",\n    \"title\": \"dolor\",\n    \"description\": \"enim\",\n    \"motel_name\": 7,\n    \"capacity\": 9,\n    \"sex\": 16,\n    \"area\": 135539319.1364,\n    \"money\": 15.60886,\n    \"deposit\": 2368381.755,\n    \"electric_money\": 12196337.1336285,\n    \"water_money\": 892.5877983,\n    \"has_wifi\": \"et\",\n    \"wifi_money\": \"blanditiis\",\n    \"has_park\": \"architecto\",\n    \"park_money\": \"quia\",\n    \"province\": \"ut\",\n    \"district\": \"quasi\",\n    \"wards\": \"ratione\",\n    \"address_detail\": \"quia\",\n    \"has_wc\": \"fuga\",\n    \"has_window\": \"nihil\",\n    \"has_security\": \"molestiae\",\n    \"has_free_move\": \"blanditiis\",\n    \"has_own_owner\": \"quidem\",\n    \"has_air_conditioner\": \"est\",\n    \"has_water_heater\": \"eaque\",\n    \"has_kitchen\": \"dolorem\",\n    \"has_fridge\": \"harum\",\n    \"has_washing_machine\": \"earum\",\n    \"has_mezzanine\": \"voluptate\",\n    \"has_bed\": \"mollitia\",\n    \"has_wardrobe\": \"sunt\",\n    \"has_tivi\": \"ullam\",\n    \"has_pet\": \"odit\",\n    \"has_balcony\": \"quo\",\n    \"hour_open\": \"omnis\",\n    \"minute_open\": \"fuga\",\n    \"hour_close\": \"minus\",\n    \"minute_close\": \"quibusdam\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/\u0110\u0103ng k\u00fd",
+            "description": "",
+            "item": [
+                {
+                    "name": "Register",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/register",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"sed\",\n    \"phone_number\": \"velit\",\n    \"email\": \"exercitationem\",\n    \"password\": \"sint\",\n    \"otp\": \"nobis\",\n    \"otp_from\": \"praesentium\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User/\u0110\u0103ng nh\u1eadp",
+            "description": "",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/login",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email_or_phone_number\": \"incidunt\",\n    \"password\": \"ullam\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "L\u1ea5y l\u1ea1i m\u1eadt kh\u1ea9u",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/reset_password",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"phone_number\": \"sed\",\n    \"password\": \"deserunt\",\n    \"otp\": \"est\",\n    \"otp_from\": \"alias\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thay \u0111\u1ed5i m\u1eadt kh\u1ea9u",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/change_password",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"password\": \"et\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Ki\u1ec3m tra email,phone_number \u0111\u00e3 t\u1ed3n t\u1ea1i\nS\u1ebd \u01b0u ti\u00ean ki\u1ec3m tra phone_number (k\u1ebft qu\u1ea3 true t\u1ed3n t\u1ea1i, false kh\u00f4ng t\u1ed3n t\u1ea1i)",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/login/check_exists",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"phone_number\": \"quia\",\n    \"email\": \"numquam\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "general",
+            "description": "",
+            "item": [
+                {
+                    "name": "api/user/handle_receiver_sms",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/handle_receiver_sms",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api/user/send_email_otp",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/send_email_otp",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Api home",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/home_app",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "T\u00ecm ki\u1ebfm ph\u00f2ng",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/community/home_app/search",
+                            "query": [
+                                {
+                                    "key": "type_motel",
+                                    "value": "sequi",
+                                    "description": "int",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "price_from",
+                                    "value": "rerum",
+                                    "description": "double",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "price_to",
+                                    "value": "iure",
+                                    "description": "double",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "is_verify",
+                                    "value": "voluptatibus",
+                                    "description": "boolean",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "sort",
+                                    "value": "soluta",
+                                    "description": "[created_at, max_price, min_price]",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "gender",
+                                    "value": "quia",
+                                    "description": "[0 male, 1 female, 2 all]",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "descending",
+                                    "value": "veritatis",
+                                    "description": "boolean",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Th\u00eam 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/services",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": 3,\n    \"service_name\": \"deleniti\",\n    \"service_icon\": \"veritatis\",\n    \"service_unit\": 1184841.43028,\n    \"service_charge\": 50\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh c\u00e1ch d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/services",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/services/:service_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/services/:service_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1eadp nh\u1eadt 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/services/:service_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": 3,\n    \"service_name\": \"vel\",\n    \"service_icon\": \"nihil\",\n    \"service_unit\": 10640781.2674,\n    \"service_charge\": 142119067.482701\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Th\u00eam 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/mo_services",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"list_service_id\": 13,\n    \"user_id\": 15,\n    \"service_name\": \"explicabo\",\n    \"service_icon\": \"unde\",\n    \"service_unit\": 1795.818606,\n    \"service_charge\": 723885961.4378\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Danh c\u00e1ch d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/mo_services/:motel_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Thong tin 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/mo_services/motel_id/:mo_service_id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "X\u00f3a 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/mo_services/:mo_service_id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "C\u1eadp nh\u1eadt 1 d\u1ecbch v\u1ee5",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/manage/mo_services/:mo_service_id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": 20,\n    \"service_name\": \"et\",\n    \"service_icon\": \"ut\",\n    \"service_unit\": 4651.47,\n    \"service_charge\": 9.0283079\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "profile user",
+            "description": "",
+            "item": [
+                {
+                    "name": "C\u1eadp nh\u1eadt 1 user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/user/profile",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"nihil\",\n    \"phone_number\": \"quasi\",\n    \"email\": \"accusamus\",\n    \"date_of_birth\": \"atque\",\n    \"avatar_image\": \"at\",\n    \"sex\": true\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}

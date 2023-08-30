@@ -1,0 +1,96 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+HMACSignature	lib/HMACSignature.php	/^class HMACSignature$/;"	c
+MessageBuilder	lib/MessageBuilder.php	/^class MessageBuilder$/;"	c
+SignatureException	lib/SignatureException.php	/^class SignatureException extends Exception$/;"	c
+__construct	lib/SignatureException.php	/^    public function __construct($message, $code = 0, Exception $previous = null)$/;"	f
+__toString	lib/MessageBuilder.php	/^    public function __toString()$/;"	f
+amount	index.php	/^    $amount = rand(10000,99999);$/;"	v
+amount	refund.php	/^    $amount = '79000';$/;"	v
+backUrl	index.php	/^        $backUrl = "$http$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";$/;"	v
+body	lib/MessageBuilder.php	/^            $body = json_encode($body);$/;"	v
+body	lib/MessageBuilder.php	/^        $this->body = $body;$/;"	v
+body	lib/MessageBuilder.php	/^    private $body;$/;"	v
+build	lib/MessageBuilder.php	/^    public function build()$/;"	f
+callAPI	inquire.php	/^	function callAPI($method, $url, $data, $headers = false){$/;"	f
+callAPI	refund.php	/^	function callAPI($method, $url, $data, $headers = false){$/;"	f
+canonicalBody	lib/MessageBuilder.php	/^    protected function canonicalBody()$/;"	f
+canonicalHeaders	lib/MessageBuilder.php	/^        $canonicalHeaders = $this->canonicalHeaders();$/;"	v
+canonicalHeaders	lib/MessageBuilder.php	/^    protected function canonicalHeaders()$/;"	f
+canonicalParams	lib/MessageBuilder.php	/^    protected function canonicalParams()$/;"	f
+canonicalPayload	lib/MessageBuilder.php	/^            $canonicalPayload = $this->canonicalBody();         $/;"	v
+canonicalPayload	lib/MessageBuilder.php	/^            $canonicalPayload = $this->canonicalParams();         $/;"	v
+checksum	payment_result.php	/^    $checksum= '8FD0C7C97ACE326DA44F7571CA223903E98552688BD6AB798F818B8FCB049B6A';$/;"	v
+components	lib/MessageBuilder.php	/^        $components = [$this->method, $this->uri, $this->date];$/;"	v
+curl	inquire.php	/^	   $curl = curl_init();$/;"	v
+curl	refund.php	/^	   $curl = curl_init();$/;"	v
+data	index.php	/^        $data = array($/;"	v
+data	inquire.php	/^	$data = [$/;"	v
+date	lib/MessageBuilder.php	/^        $this->date = $date;$/;"	v
+date	lib/MessageBuilder.php	/^    private $date;$/;"	v
+description	index.php	/^    $description = "Mô tả giao dịch";$/;"	v
+description	refund.php	/^    $description = "Mô tả giao dịch";$/;"	v
+hashChecksum	payment_result.php	/^	$hashChecksum = strtoupper(hash('sha256', $result. $secretKeyChecksum));$/;"	v
+headers	inquire.php	/^	$headers = array($/;"	v
+headers	lib/MessageBuilder.php	/^        $this->headers = $headers;$/;"	v
+headers	lib/MessageBuilder.php	/^    private $headers;$/;"	v
+headers	refund.php	/^	$headers = array($/;"	v
+hmacs	index.php	/^        $hmacs = new HMACSignature();$/;"	v
+hmacs	inquire.php	/^	$hmacs = new HMACSignature();$/;"	v
+hmacs	refund.php	/^	$hmacs = new HMACSignature();$/;"	v
+http	index.php	/^        $http = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https:\/\/' : 'http:\/\/';$/;"	v
+httpData	index.php	/^        $httpData = [$/;"	v
+instance	lib/MessageBuilder.php	/^    public static function instance()$/;"	f
+invoiceNo	index.php	/^    $invoiceNo = time() + rand(0,999999);$/;"	v
+message	index.php	/^        $message = MessageBuilder::instance()$/;"	v
+message	inquire.php	/^	$message = MessageBuilder::instance()$/;"	v
+message	refund.php	/^	$message = MessageBuilder::instance()$/;"	v
+method	lib/MessageBuilder.php	/^        $this->method = $method;$/;"	v
+method	lib/MessageBuilder.php	/^    private $method = 'GET';$/;"	v
+padlen	payment_result.php	/^            $padlen = 4 - $remainder;$/;"	v
+params	lib/MessageBuilder.php	/^        $this->params = $params;$/;"	v
+params	lib/MessageBuilder.php	/^    private $params;$/;"	v
+payment	result.php	/^        $payment = json_decode($result);$/;"	v
+payment	result.php	/^    $payment = [];$/;"	v
+payment_no	refund.php	/^	$payment_no = '304181223691';$/;"	v
+redirectUrl	index.php	/^        $redirectUrl = END_POINT . '\/portal?' . http_build_query($httpData);$/;"	v
+refund_param	refund.php	/^	$refund_param = array($/;"	v
+remainder	payment_result.php	/^        $remainder = \\strlen($input) % 4;$/;"	v
+request_id	refund.php	/^    $request_id = time() + rand(0,999999);$/;"	v
+response	inquire.php	/^	$response = callAPI('POST', END_POINT . '\/api\/payments\/create', false, $headers);$/;"	v
+response	refund.php	/^	$response = callAPI('POST', END_POINT . '\/refunds\/create', $refund_param, $headers);$/;"	v
+result	inquire.php	/^	   $result = curl_exec($curl);$/;"	v
+result	payment_result.php	/^    $result = 'eyJhbW91bnQiOjExMDAwMCwiYW1vdW50X2ZvcmVpZ24iOm51bGwsImFtb3VudF9vcmlnaW5hbCI6bnVsbCwiYW1vdW50X3JlcXVlc3QiOjExMDAwMCwiYmFuayI6bnVsbCwiY2FyZF9icmFuZCI6IlZJU0EiLCJjYXJkX2luZm8iOnsidG9rZW4iOiIzMDQ2NWEwMDRiZjU0NWQxNjkyMWEyY2ZhMjAwNmVlYyIsImNhcmRfbmFtZSI6Ik5HVVlFTiBWQU4gQSIsImhhc2hfY2FyZCI6ImI1NDdjNjdhZmJkODM0N2Y2ZWY0YmFhMGViOGFkZDkyIiwiY2FyZF9icmFuZCI6IlZJU0EiLCJjYXJkX251bWJlciI6IjQwMDU1NXh4eHh4eDAwMDkifSwiY3JlYXRlZF9hdCI6IjIwMjItMDYtMDNUMDI6MDY6MjguMDAwMDAwWiIsImN1cnJlbmN5IjoiVk5EIiwiZGVzY3JpcHRpb24iOiJUaGFuaCB0b8OhbiDEkcahbiBow6BuZyBRUDE2NTQyNDcxNzE1MjMwMzU4IiwiZXhjX3JhdGUiOm51bGwsImZhaWx1cmVfcmVhc29uIjpudWxsLCJmb3JlaWduX2N1cnJlbmN5IjpudWxsLCJpbnZvaWNlX25vIjoiUVAxNjU0MjQ3MTcxNTIzMDM1OCIsImxhbmciOm51bGwsIm1ldGhvZCI6IkNSRURJVF9DQVJEIiwicGF5bWVudF9ubyI6Mjk5Nzc4NTIyODk1LCJzdGF0dXMiOjUsInRlbm9yIjpudWxsfQ';$/;"	v
+result	refund.php	/^	   $result = curl_exec($curl);$/;"	v
+result	result.php	/^        $result = base64_decode($_GET['result']);$/;"	v
+returnUrl	index.php	/^        $returnUrl = str_replace('index.php', '', $backUrl);$/;"	v
+secretKeyChecksum	payment_result.php	/^	$secretKeyChecksum = 's6KiGBywWbxAhHmXI5jesx4QHM2YWzLC';$/;"	v
+sign	lib/HMACSignature.php	/^    public function sign($message, $key)$/;"	f
+signature	index.php	/^        $signature = $hmacs->sign($message, MERCHANT_SECRET_KEY);$/;"	v
+signature	inquire.php	/^    $signature = $hmacs->sign($message, MERCHANT_SECRET_KEY);$/;"	v
+signature	lib/HMACSignature.php	/^        $signature = hash_hmac('sha256', $message, $key, true);$/;"	v
+signature	refund.php	/^	$signature = $hmacs->sign($message, MERCHANT_SECRET_KEY);$/;"	v
+status	result.php	/^        $status = $payment->status;$/;"	v
+status	result.php	/^    $status = 0;$/;"	v
+statusLabel	result.php	/^    $statusLabel = statusLabel($status);$/;"	v
+statusLabel	result.php	/^    function statusLabel($status)$/;"	f
+str	lib/MessageBuilder.php	/^            $str = substr($str, 0, -1);$/;"	v
+str	lib/MessageBuilder.php	/^        $str = '';$/;"	v
+time	index.php	/^        $time = time();$/;"	v
+time	inquire.php	/^	$time = time();$/;"	v
+time	refund.php	/^	$time = time();$/;"	v
+uri	lib/MessageBuilder.php	/^        $this->uri = $uri;$/;"	v
+uri	lib/MessageBuilder.php	/^    private $uri;$/;"	v
+url	inquire.php	/^				$url = sprintf("%s?%s", $url, http_build_query($data));$/;"	v
+url	refund.php	/^				$url = sprintf("%s?%s", $url, http_build_query($data));$/;"	v
+urlsafeB64Decode	payment_result.php	/^function urlsafeB64Decode($input)$/;"	f
+valid_signature	lib/HMACSignature.php	/^        $valid_signature = $this->sign($message, $key);$/;"	v
+validate	lib/MessageBuilder.php	/^    protected function validate()$/;"	f
+verify	lib/HMACSignature.php	/^    public function verify($signature, $message, $key)$/;"	f
+with	lib/MessageBuilder.php	/^    public function with($date, $uri, $method = 'GET', $headers = [])$/;"	f
+withBody	lib/MessageBuilder.php	/^    public function withBody($body)$/;"	f
+withParams	lib/MessageBuilder.php	/^    public function withParams(array $params = [])$/;"	f

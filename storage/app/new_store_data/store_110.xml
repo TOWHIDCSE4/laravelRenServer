@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<store>
+    <logo>https://i.imgur.com/JxzuoMw.png</logo>
+    <color_main_1>#ffdc3e11</color_main_1>
+    <id>110</id>
+    <banners>
+        <banner>https://i.imgur.com/tyXbraN.jpg</banner>
+        <banner>https://i.imgur.com/tyXbraN.jpg</banner>
+    </banners>
+    <categories>
+        <category>
+            <id>131</id>
+            <name>Bàn ghế sofa</name>
+            <image>https://i.imgur.com/lcLHxTD.jpg</image>
+        </category>
+        <category>
+            <id>132</id>
+            <name>Kệ Tivi</name>
+            <image>https://i.imgur.com/YENTPP7.jpg</image>
+        </category>
+        <category>
+            <id>133</id>
+            <name>Gường</name>
+            <image>https://i.imgur.com/4EeLA3p.jpg</image>
+        </category>
+        <category>
+            <id>134</id>
+            <name>Tủ</name>
+            <image>https://i.imgur.com/WopWjvr.jpg</image>
+        </category>
+        <category>
+            <id>135</id>
+            <name>Đèn</name>
+            <image>https://i.imgur.com/HFAEqv3.jpg</image>
+        </category>
+    </categories>
+
+  
+    <attributes>
+        <attribute>Xuất xứ</attribute>
+        <attribute>Thời hạn bảo hành</attribute>
+    </attributes>
+    <products>
+
+        <product>
+            <name>Sofa gỗ óc chó chữ U ZG 159 OC</name>
+            <price>120000000</price>
+            <categories>131</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>ZG 159 chất liệu gỗ óc chó cao cấp</p>
+            <p>ZG 159 thuộc bộ sưu tập Luxury của ZITO với chất liệu gỗ óc chó cao cấp nhập khẩu từ Bắc Mỹ.</p>]]></description>
+            <images>
+                <image>https://i.imgur.com/F6HQnGT.jpg</image>
+                <image>https://i.imgur.com/ClUvow8.jpg</image>
+                <image>https://i.imgur.com/Ch0Ke4L.jpg</image>
+            </images>
+            
+        </product>
+
+        <product>
+            <name>Sofa chữ L gỗ óc chó ZG 155 OC</name>
+            <price>85000000</price>
+            <categories>131</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Sofa chữ L gỗ óc chó ZG 155 OC – Xứng tầm không gian phòng khách</p>
+                <p>Khi nhắc đến sản phẩm được làm từ gỗ óc chó, bạn liên tưởng đến gì? Với sofa gỗ óc chó ZG 155 để lại cho người nhìn sự lưu luyến ở ngay ánh nhìn đầu tiên.
+                 Vẫn là một bộ sofa góc L những ZG 155 sở hữu những đường cong mềm mại hội tụ tinh hoa của một bộ bàn ghế đẹp.</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/TkdTiyo.jpg</image>
+                <image>https://i.imgur.com/HiLhRP7.jpg</image>
+                <image>https://i.imgur.com/R6TdQ6W.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Kê tivi sang trọng</name>
+            <price>65000000</price>
+            <categories>132</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Thiết kế sang trọng, lịch sự</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/AdeI9z2.jpg</image>
+                <image>https://i.imgur.com/hDI1rK0.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Kệ tivi đứng</name>
+            <price>12000000</price>
+            <categories>132</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Thiết kế gọn gàng, sang trong</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/bYGWieL.jpg</image>
+                <image>https://i.imgur.com/gmhUdNa.jpg</image>
+                <image>https://i.imgur.com/pVNUSRt.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Giường gỗ tự nhiên ZA 806</name>
+            <price>22000000</price>
+            <categories>133</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Giường gỗ tự nhiên ZA 806 là một trong những sản phẩm thuộc BST giường ngủ gỗ tự nhiên cao cấp của Nội Thất ZITO đã và đang nhận được rất nhiều sự quan tâm của các gia đình.</p>
+                <p>Sản phẩm không chỉ là món nội thất quan trọng mà nó còn là điểm nhấn tạo sự ấn tượng cho bất kỳ ai khi bước vào. Với thiết kế cá tính, độc đáo thể hiện được gu thẩm mỹ rất riêng của gia chủ.</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/8L5POzk.jpg</image>
+                <image>https://i.imgur.com/Kvv7eM6.jpg</image>
+                <image>https://i.imgur.com/06YCYp5.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Giường ngủ tròn gỗ tự nhiên ZA 809</name>
+            <price>28000000</price>
+            <categories>133</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Giường ngủ vẫn luôn là món đồ nội thất quan trọng trong không gian sinh hoạt của mỗi gia đình. Nơi chúng ta nghỉ ngơi thư giãn sau một ngày dài làm việc mệt mỏi. Chính vì điều này, kiểu dáng thiết kế của giường ngủ rất quan trọng. ZITO hiểu được mong muốn của khách hàng, cho ra mẫu giường ngủ tròn gỗ tự nhiên ZA 809 sang trọng đầy đẳng cấp. Mang đến cho gia chủ những giấc ngủ ngon mà góp phần tạo sự phẩm mỹ cho không gian phòng ngủ.</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/Ev4NHz7.jpg</image>
+                <image>https://i.imgur.com/Z8NOkq2.jpg</image>
+                <image>https://i.imgur.com/TeJpiXK.jpg</image>
+            </images>
+        </product>
+    </products>
+</store>

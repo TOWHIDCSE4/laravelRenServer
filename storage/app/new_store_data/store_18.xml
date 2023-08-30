@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<store>
+    <logo>https://i.imgur.com/ba3w0ia.png</logo>
+    <color_main_1>#ffdc3e11</color_main_1>
+    <id>18</id>
+    <banners>
+        <banner>https://i.imgur.com/zKxn8RY.jpg</banner>
+        <banner>https://i.imgur.com/aX1WRqK.jpg</banner>
+    </banners>
+    <categories>
+        <category>
+            <id>137</id>
+            <name>HanMade</name>
+            <image>https://i.imgur.com/ba3w0ia.png</image>
+        </category>
+        <category>
+            <id>131</id>
+            <name>HanMade2</name>
+            <image>https://i.imgur.com/ba3w0ia.png</image>
+        </category>
+        <category>
+            <id>132</id>
+            <name>HanMade3</name>
+            <image>https://i.imgur.com/ba3w0ia.png</image>
+        </category>
+        <category>
+            <id>133</id>
+            <name>HanMade4</name>
+            <image>https://i.imgur.com/ba3w0ia.png</image>
+        </category>
+        <category>
+            <id>134</id>
+            <name>HanMade5</name>
+            <image>https://i.imgur.com/ba3w0ia.png</image>
+        </category>
+        <category>
+            <id>135</id>
+            <name>HanMade6</name>
+            <image>https://i.imgur.com/ba3w0ia.png</image>
+        </category>
+    </categories>
+
+
+    <attributes>
+        <attribute>Xuất xứ</attribute>
+        <attribute>Bảo hành</attribute>
+    </attributes>
+    <products>
+
+        <product>
+            <name>Handmade 1</name>
+            <price>200000</price>
+            <categories>137</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Định nghĩa đồ handmade chính là hoạt động chế tác thủ công những nguyên liệu thô sẵn có 
+            (hoặc không sử dụng tới) để làm nên một món đồ thường dùng trong đời sống hằng ngày. </p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/9ScM5OL.jpg</image>
+                <image>https://i.imgur.com/9ScM5OL.jpg</image>
+            </images>
+
+        </product>
+
+        <product>
+            <name>Làm chậu cây handmade</name>
+            <price>150000</price>
+            <categories>137</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Trang trí bàn làm việc bằng chậu cây handmade là một ý tưởng hết sức tuyệt vời</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/v3L86hf.jpg</image>
+                <image>https://i.imgur.com/WUeR16D.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Làm ống đựng bút handmade</name>
+            <price>200000</price>
+            <categories>137</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Hộp đựng bút hay thường được gọi là ống đựng bút là một trong những món đồ sử dụng rất cần thiết trên bàn
+                làm việc. Ngoài việc giúp bạn có góc làm việc ngăn nắp ra, nó còn là vật rất phù hợp dùng để trang trí. 
+                Ý tưởng để làm ống đựng bút handmade rất đa dạng và đầy đủ</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/KqfGkx1.jpg</image>
+                <image>https://i.imgur.com/VPa7xNr.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Dây treo ảnh handmade</name>
+            <price>1200000</price>
+            <categories>137</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Treo những bức hình đẹp tại địa điểm thực hiện công việc là một trong những cách giúp bạn 
+                luôn duy trì động lực của mình. </p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/9x2Mpaj.jpg</image>
+                <image>https://i.imgur.com/ZyLimb0.jpg</image>
+
+            </images>
+        </product>
+
+
+        <product>
+            <name>Làm tranh treo tường handmade</name>
+            <price>370000</price>
+            <categories>137</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Nếu bạn nghĩ làm tranh treo tường handmade là phải ngồi vẽ những tác phẩm phức tạp thì nó hoàn toàn không như
+                bạn tưởng tượng đâu. Đối với tranh treo tường handmade bạn không cần phải có năng khiếu vẽ giống như một họa sĩ.</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/9SWiCTm.jpg</image>
+                <image>https://i.imgur.com/9NfH6Mk.jpg</image>
+
+            </images>
+        </product>
+
+        <product>
+            <name>Kệ treo tường handmade</name>
+            <price>230000</price>
+            <categories>137</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Những chiếc kệ treo tường rất có ý nghĩakhi mà bạn trang trí cho góc thực hiện công việc của mình, nó
+                 giúp cho chiếc bàn thực hiện công việc giảm tải đi những món đồ trang trí và giành phần không gian ấy ra để bạn được thoải mái hơn. 
+                 Kệ treo tường sẽ giúp bạn đặt những cuốn sách mình yêu thích lên đấy</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/Qc44fHC.jpg</image>
+                <image>https://i.imgur.com/Qc44fHC.jpg</image>
+            </images>
+        </product>
+    </products>
+</store>

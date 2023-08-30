@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<store>
+    <logo>https://i.imgur.com/ROjUrQo.jpg</logo>
+    <color_main_1>#ffdc3e11</color_main_1>
+    <id>111</id>
+    <banners>
+        <banner>https://i.imgur.com/LdLPEdB.png</banner>
+        <banner>https://i.imgur.com/kRI1J6E.jpg</banner>
+    </banners>
+    <categories>
+        <category>
+            <id>114</id>
+            <name>Điện thoại</name>
+            <image>https://i.imgur.com/ROjUrQo.jpg</image>
+        </category>
+        <category>
+            <id>115</id>
+            <name>Laptop</name>
+            <image>https://i.imgur.com/TnlddaB.jpg</image>
+        </category>
+        <category>
+            <id>116</id>
+            <name>Iphone</name>
+            <image>https://i.imgur.com/gzwfNQH.jpg</image>
+        </category>
+        <category>
+            <id>117</id>
+            <name>Samsung</name>
+            <image>https://i.imgur.com/xiQAbzo.jpg</image>
+        </category>
+        <category>
+            <id>118</id>
+            <name>Dell</name>
+            <image>https://i.imgur.com/PS3rSyW.jpg</image>
+        </category>
+        <category>
+            <id>119</id>
+            <name>Macbook</name>
+            <image>https://i.imgur.com/ApT56kI.jpg</image>
+        </category>
+    </categories>
+
+  
+    <attributes>
+        <attribute>Xuất xứ</attribute>
+        <attribute>Thời hạn bảo hành</attribute>
+    </attributes>
+    
+    <products>
+
+        <product>
+            <name>OPPO Renno6 5G</name>
+            <price>12900000</price>
+            <categories>114</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p style="text-align:justify"><b>Sẵn sàng bật tung cảm xúc cùng OPPO Reno6 5G, chiếc điện thoại sở hữu thiết kế đẳng cấp siêu mỏng nhẹ, camera chụp chân dung Bokeh Flare độc đáo và trên hết là kết nối mạng 5G siêu tốc, cùng bạn kết nối tương lai.</b></p>]]></description>
+            <images>
+                <image>https://i.imgur.com/8ZR1bmS.png</image>
+                <image>https://i.imgur.com/BkArrxS.jpg</image>
+            </images>
+            
+        </product>
+
+        <product>
+            <name>Điện thoại iPhone 11 64GB</name>
+            <price>17490000</price>
+            <categories>114</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[Tháng 09/2019, Apple đã chính thức trình làng bộ 3 siêu phẩm iPhone 11, trong đó phiên bản iPhone 11 64GB có mức giá rẻ nhất nhưng vẫn được nâng cấp mạnh mẽ như iPhone Xr ra mắt trước đó.
+                    Nâng cấp mạnh mẽ về camera
+                    Nói về nâng cấp thì camera chính là điểm có nhiều cải tiến nhất trên thế hệ iPhone mới.]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/ljLdmQI.jpg</image>
+                <image>https://i.imgur.com/9C91RlD.jpg</image>
+                <image>https://i.imgur.com/H8A1Eki.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Điện thoại Samsung Galaxy Note 20</name>
+            <price>14990000</price>
+            <categories>114</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[Tháng 8/2020, Galaxy Note 20 chính thức được lên kệ, với thiết kế camera trước nốt ruồi quen thuộc, cụm camera hình chữ nhật mới lạ cùng với vi xử lý Exynos 990 cao cấp của chính Samsung chắc hẳn sẽ mang lại một trải nghiệm thú vị cùng hiệu năng mạnh mẽ.
+                    Camera cụm hình chữ nhật độc đáo cùng thiết kế mạnh mẽ
+                    Điện thoại sở hữu thiết kế khung kim loại chắc chắn, mặt lưng nhựa bóng bẩy, kiểu dáng mạnh mẽ với những góc cạnh vuông vức nhưng vẫn mang lại cảm giác cầm nắm thoải mái.]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/0NG3qk9.jpg</image>
+                <image>https://i.imgur.com/g43vXX8.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Laptop Asus TUF Gaming FX506LH i5</name>
+            <price>21490000</price>
+            <categories>115</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[Với sự mạnh mẽ, bền bỉ từ thiết kế vẻ ngoài lẫn bên trong cấu hình, Asus TUF Gaming FX506LH (HN002T) sẽ là một trợ thủ đắc lực của bạn trong trò chơi yêu thích và cả những tác vụ nặng khác.
+                        Đa nhiệm mượt mà với chip Intel Core i5 thế hệ 10 tiêu chuẩn gaming
+                        Asus TUF Gaming được trang bị chip Intel Comet Lake 10300H cho hiệu năng ổn định, chiến game cực chất với 4 nhân 8 luồng cùng xung nhịp ép lên đến 4.5 GHz nhờ công nghệ Turbo Boost.
+
+                        Card đồ hoạ rời mà FX506LH sử dụng là NVIDIA GeForce GTX 1650 4GB. Card được thiết kế theo kiến trúc Turning tiên tiến, giúp cân bằng giữa sức mạnh xử lý hình ảnh và điện năng tiêu thụ của máy cho các game thủ trải nghiệm mượt mà các trò chơi nổi tiếng như PUBG, GTA V, Battlefield,... trên độ phân giải Full HD hay sử dụng tốt các phần mềm đồ hoạ như: Photoshop, Illustrator, Premiere,...
+
+                        Laptop Asus TUF Gaming FX506LH i5 (HN002T) - Cấu hình
+
+                        RAM 8 GB loại DDR4 (2 khe) đảm bảo khả năng đa nhiệm của máy ổn định với tốc độ Bus RAM lên đến 2933 MHz, bạn có thể vừa chơi game, vừa phát trực tiếp, vừa xử lý các tác vụ khác mà không phải lo lắng quá nhiều về tốc độ của máy. Ngoài ra, Asus còn hỗ trợ nâng cấp RAM đến 32 GB để bạn dễ dàng có được hiệu năng như ý muốn.
+
+                        Ổ cứng SSD 512 GB MVMe PCle cho tốc độ khởi động máy và truy xuất dữ liệu nhanh chóng chỉ từ 5 - 10 giây, đủ không gian lưu trữ để tải về những tựa game và phần mềm ưa thích. Ngoài ra, máy còn hỗ trợ khe cắm SSD M.2 PCle khác giúp bạn dễ dàng nâng cấp bộ nhớ của mình.
+
+                        Laptop Asus TUF Gaming FX506LH i5 (HN002T) - RAM và SSD
+
+                        Tối ưu hoá hiển thị với màn hình 15.6 inch viền 7 mm
+                        Laptop Asus chế tác màn hình viền mỏng mang đến hình ảnh chất lượng với độ phân giải Full HD sắc nét. Đây là màn hình 144 Hz có tốc độ khung hình cao, giúp hình ảnh trong game chuyển động mượt mà, tối ưu nhất và giảm thiểu hiện tượng bị xé hình.
+
+                        Tấm nền IPS cho góc nhìn rộng đến 178 độ cùng công nghệ chống chói Anti Glare đảm bảo hình ảnh hiển thị trong điều kiện ánh sáng nào cũng ổn định, đem đến trải nghiệm chơi game, làm việc, giải trí cực kì hài lòng.
+
+                        Laptop Asus TUF Gaming FX506LH i5 (HN002T) - Màn hình
+
+                        Công nghệ giả lập âm thanh vòm DTS X:Ultra Audio giúp tái tạo âm thanh giống như thực tế, cho âm thanh to, chân thực, rõ ràng. Nhờ công nghệ này mà bạn hoàn toàn có thể nghe rõ được tiếng bước chân của người chơi khác trong những tựa game nhập vai và dễ dàng dành chiến thắng.
+
+                        Laptop Asus TUF Gaming FX506LH i5 (HN002T) - Âm thanh
+
+                        Kiểu dáng mạnh mẽ, cá tính phù hợp cho các game thủ
+                        Máy có lớp vỏ ngoài bằng nhựa chắc tay cùng nắp lưng bằng kim loại màu xám sang trọng cùng với biểu tượng gaming đặc trưng của TUF. Một chiếc laptop gaming nhưng trọng lượng chỉ 2.3 kg là một trong những điểm bạn sẽ bất ngờ khi tìm hiểu về chiếc máy tính này. Bạn sẽ dễ dàng cho vào balo để mang theo trong những chuyến đi công tác, cà phê, họp mặt chiến game cùng bạn bè,...
+
+                        Laptop Asus TUF Gaming FX506LH i5 (HN002T) - Thiết kế
+
+                        Công nghệ HyperCool độc quyền dành cho các sản phẩm máy tính xách tay ASUS Gaming bao gồm hệ thống Anti-Dust Cooling có thể tùy chỉnh hai quạt hiệu suất cao 12V mang lại luồng khí mạnh hơn, giúp tăng cường khả năng tản nhiệt của chiếc laptop này.
+
+                        Laptop Asus TUF Gaming FX506LH i5 (HN002T) - Tản nhiệt
+
+                        Máy còn đạt chuẩn Wi-Fi 6 - 802.11ax cho tốc độ truyền tải đến 10.000 Mbps và chuẩn Bluetooth v5.0 cho tốc độ kết nối không dây ổn định, tải dữ liệu nhanh chóng.
+
+                        Các cổng kết nối như: USB 3.2, HDMI, LAN (RJ45), USB Type-C, jack sạc, jack tai nghe đều được đặt bên cạnh trái của máy giúp truyền tải dữ liệu qua các thiết bị ngoại vi thuận tiện mà không làm ảnh hưởng đến không gian dùng chuột phía bên tay phải.
+
+                        Laptop Asus TUF Gaming FX506LH i5 (HN002T) - Cổng kết nối
+
+                        Tràn đầy cảm hứng chiến game với bàn phím thiết kế độc đáo
+                        Laptop có hành trình phím 1.8 mm, không gian phím rộng rãi và tuổi thọ lên đến 20 triệu lần nhấn, đủ cho nhiều năm làm việc và chơi game. Công nghệ Overstroke độc quyền giúp rút ngắn hành trình kích hoạt phím, tăng số lượng chuyển động phím mỗi phút, giúp thông tin ghi lại nhanh hơn và tiện lợi hơn.
+
+                        Laptop Asus TUF Gaming FX506LH i5 (HN002T) - Bàn phím
+
+                        Bên cạnh đó, bàn phím còn sở hữu giải đèn LED RGB chuyển màu ấn tượng cùng thiết kế cụm phím WASD nổi bật so với những phím còn lại giúp bạn có thêm hứng thú để thể hiện những kĩ năng thành thạo trên game.
+
+                        Asus TUF Gaming FX506LH i5 10300H (HN002T) - Đèn LED RGB
+
+                        Nhờ được trang bị chip Core i5 gen 10 và card rời GTX 1650 4GB,... Asus TUF Gaming FX506LH có hiệu năng mạnh mẽ, chiến game tốt, phù hợp với những bạn trẻ đam mê game, có nhu cầu giải trí cùng bạn bè sau những giờ làm việc căng thẳng. Đối với dân thiết kế đồ hoạ đòi hỏi cấu hình máy cao thì đây cũng là một sự lựa chọn tốt.
+
+                        ]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/vSwOaF3.jpg</image>
+                <image>https://i.imgur.com/6X9leKU.jpg</image>
+            </images>
+        </product>
+
+
+        <product>
+            <name>MacBook Pro M1 2020 8GB/256GB/Space Grey (MYD82SA/A) </name>
+            <price>34900000</price>
+            <categories>115</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[Apple Macbook Pro M1 2020 (MYD82SA/A) sở hữu thiết kế sang trọng kế thừa từ các thế hệ trước và bên trong là một cấu hình ấn tượng từ con chip M1 lần đầu tiên xuất hiện trên MacBook Pro, hiệu năng CPU của máy tăng đến 2.8 lần, hiệu năng GPU tăng 5 lần.
+                    Thiết kế mỏng nhẹ, cao cấp
+                    Vẫn là thiết kế kim loại nguyên khối thường thấy ở các thế hệ trước, phiên bản MacBook Pro luôn mang lại một ngoại hình sang trọng đẳng cấp, mỏng nhẹ chỉ 15.6 mm từ độ dày, trọng lượng 1.4 kg có thể tự tin đồng hành mọi lúc, cùng bạn đến bất cứ đâu mà bạn muốn như đi học, đi chơi, đi công tác,...]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/Kh6dzM9.jpg</image>
+                <image>https://i.imgur.com/ktFLxBR.jpg</image>
+                <image>https://i.imgur.com/ySsCSxp.jpg</image>
+                <image>https://i.imgur.com/8dA7MJw.jpg</image>
+                <image>https://i.imgur.com/us7Xxsi.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Laptop Dell Gaming G3 15 i7 10750H/16GB/256GB</name>
+            <price>27200000</price>
+            <categories>115</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[Laptop Dell G3 15 i7 (P89F002G3500C) là chiếc laptop trong phân khúc gaming nhận được nhiều sự quan tâm đặc biệt bởi thiết kế phổ thông, đơn giản cùng hiệu năng tối ưu mạnh mẽ phù hợp với đa dạng người dùng cho cả nhu cầu học tập, làm việc và giải trí.
+                Thiết kế đơn giản chắc chắn
+                Dell G3 sở hữu vẻ ngoài đơn giản và phổ thông nhưng vẫn không kém phần tinh tế và trẻ trung với độ dày 30.96 mm và khối lượng 2.56 kg, mang cảm giác mạnh mẽ, cá tính.
+
+                Thiết kế với chất liệu nhựa, nắp lưng được tạo vân không bám dính vân tay và mồ hôi, giữ máy luôn sạch sẽ, nổi bật là logo Dell với màu xanh cá tính, năng động mang một nét riêng làm nên sự nổi bật của chiếc laptop gaming này.]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/WKP6Emj.jpg</image>
+                <image>https://i.imgur.com/end4ITA.jpg</image>
+                <image>https://i.imgur.com/9iumtNd.jpg</image>
+                <image>https://i.imgur.com/jridU9T.jpg</image>
+            </images>
+        </product>
+    </products>
+</store>

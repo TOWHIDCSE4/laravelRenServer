@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<store>
+    <logo>https://data1.doapp.vn/public/api/SahaImages/PrhiNTjlGU1633340543.png</logo>
+    <color_main_1>#179ccd</color_main_1>
+    <id>12</id>
+    <banners>
+        <banner>https://data1.doapp.vn/public/api/SahaImages/KBADbooyBv1633319809.jpg</banner>
+        <banner>https://data1.doapp.vn/public/api/SahaImages/PaueqOacsy1633319820.jpg</banner>
+        <banner>https://data1.doapp.vn/public/api/SahaImages/VxHDLwjXzK1633336326.jpg</banner>
+        <banner>https://data1.doapp.vn/public/api/SahaImages/FsOpQTeEBd1633336351.jpg</banner>
+    </banners>
+    <categories>
+       <category>
+            <id>138</id>
+            <name>Đồ dùng ăn uống</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/SNrmvEvrVZ1633320529.jpg</image>
+        </category>
+        <category>
+            <id>139</id>
+            <name>Bỉm tã và vệ sinh</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/blFLrKwELZ1633320558.jpg</image>
+        </category>
+        <category>
+            <id>140</id>
+            <name>Đồ sơ sinh</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/eHtmpqTadS1633320677.jpg</image>
+        </category>
+        <category>
+            <id>141</id>
+            <name>Giặt xả tắm gội</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/upprZTAmUl1633320698.jpg</image>
+        </category>
+        <category>
+            <id>142</id>
+            <name>Mẹ bầu và sau sinh</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/SonQcqkaNs1633320725.jpg</image>
+        </category>
+        <category>
+            <id>143</id>
+            <name>Xe đai địu</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/QllXcPbQwV1633320744.jpg</image>
+        </category>
+        <category>
+            <id>144</id>
+            <name>Sữa và thực phẩm</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/keMPPHEcpt1633320793.jpg</image>
+        </category>
+    </categories>
+  
+    <attributes>
+        <attribute>Xuất xứ</attribute>
+        <attribute>Thời hạn bảo hành</attribute>
+    </attributes>
+    <products>
+        <product>
+            <name>Bình tập uống nước Kid Mama 270ml</name>
+            <price>230000</price>
+            <categories>138</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/eROLujRaba1633335198.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Bình uống nước 50ml Pigeon</name>
+            <price>276250</price>
+            <categories>138</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/BzXHHlbXYQ1633335304.jpg</image>
+            </images>           
+        </product>
+        <product>
+            <name>Bỉm tã quần Huggies</name>
+            <price>99000</price>
+            <categories>139</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/cmNVtBwzMx1633335712.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Set quà tặng Otis in hình</name>
+            <price>318750</price>
+            <categories>140</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/MQPDLkFoIa1633335769.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Thau tắm trẻ em kèm tựa Notoro</name>
+            <price>299000</price>
+            <categories>141</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/qMJjcrQCbk1633338234.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Ghế ngồi oto và nôi xách</name>
+            <price>1148000</price>
+            <categories>143</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/psFoZmHOXM1633335813.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Xe tập đi Mamago</name>
+            <price>841500</price>
+            <categories>143</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/SaRxiVNhBH1633335843.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Bột ăn dặm HiPP 250g cho bé 6M+</name>
+            <price>106250</price>
+            <categories>144</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/yVkFnPuQHs1633335631.jpg</image>
+            </images>           
+        </product>
+
+
+    </products>
+</store>

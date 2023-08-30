@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<store>
+    <logo>https://i.imgur.com/QuEWIMn.png</logo>
+    <color_main_1>#ffdc3e11</color_main_1>
+    <id>14</id>
+    <banners>
+        <banner>https://i.imgur.com/h6Dth3p.jpg</banner>
+        <banner>https://i.imgur.com/V1TYGYx.jpg</banner>
+    </banners>
+    <categories>
+        <category>
+            <id>116</id>
+            <name>Bếp</name>
+            <image>https://i.imgur.com/LvAbDl2.png</image>
+        </category>
+        <category>
+            <id>117</id>
+            <name>Máy ép</name>
+            <image>https://i.imgur.com/H67YwF2.jpg</image>
+        </category>
+        <category>
+            <id>118</id>
+            <name>Nồi</name>
+            <image>https://i.imgur.com/OPNwlHw.jpg</image>
+        </category>
+        <category>
+            <id>119</id>
+            <name>Máy hút bụi</name>
+            <image>https://i.imgur.com/oaTVugR.jpg</image>
+        </category>
+        <category>
+            <id>120</id>
+            <name>Thiết bị vệ sinh</name>
+            <image>https://i.imgur.com/zn4drzk.jpg</image>
+        </category>
+        <category>
+            <id>121</id>
+            <name>Tủ bàn</name>
+            <image>https://i.imgur.com/muz5czD.jpg</image>
+        </category>
+    </categories>
+
+  
+    <attributes>
+        <attribute>Xuất xứ</attribute>
+        <attribute>Thời hạn bảo hành</attribute>
+    </attributes>
+    <products>
+
+        <product>
+            <name>Bếp Điện Iruka I-20N 1 Từ 1 Hồng Ngoại</name>
+            <price>18990000</price>
+            <categories>116</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<h3>Mặt bếp bằng kính cao cấp</h3>
+            <p>Mặt bếp được làm bằng kính Schott công nghệ Đức chịu lực, chịu nhiệt, rất bóng, dễ dàng vệ sinh, lau chùi các vết bẩn bám trên bề mặt một các nhanh chóng.</p>]]></description>
+            <images>
+                <image>https://i.imgur.com/rTuvi6q.jpg</image>
+                <image>https://i.imgur.com/6Vt4hzL.jpg</image>
+                <image>https://i.imgur.com/7YMwXIu.jpg</image>
+            </images>
+            
+        </product>
+
+        <product>
+            <name>Nồi Cơm Điện Áp Suất Điện Tử Cuckoo CRPRT1008F 1.8L</name>
+            <price>7475000</price>
+            <categories>118</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<h3>Thiết kế hiện đại</h3>
+                <p> Nồi Cơm Điện Áp Suất Điện Tử Cuckoo CRPRT1008F 1.8L sở hữu kiểu dáng hiện đại, màu sắc bắt mắt sẽ tô điểm lên không gian bếp nhà bạn. Kích thước nhỏ gọn có thể nhấc lên hay di chuyển dễ dàng, an toàn.</p>
+                <h3>Lòng nồi phủ men kim cương X-Wall cao cấp</h3>
+                <p>Lòng nồi phủ men kim cương X-Wall cao cấp, chống dính hiệu quả và an toàn cho sức khỏe. Ngoài ra, nắp phụ bằng thép không gỉ và có thể tháo rời vệ sinh. Gioăng cao su kép tối đa hóa khả năng giữ nhiệt và giữ áp suất trong quá trình nấu ăn.</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/cbnF1a6.jpg</image>
+                <image>https://i.imgur.com/VJyZZES.jpg</image>
+                <image>https://i.imgur.com/22oktmh.jpg</image>
+                <image>https://i.imgur.com/hpqPxmN.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Nồi Chiên Không Dầu Kangaroo KG12AF1A</name>
+            <price>4999000</price>
+            <categories>118</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<h3 style="text-align: justify;">Thiết kế hiện đại, kiểu dáng bắt mắt</h3>
+                <p style="text-align: justify;">Nồi chiên không dầu Kangaroo 12 lít KG12AF1A sở hữu kiểu dáng nhỏ gọn nên không chiếm nhiều không gian diện tích nhưng vẫn nấu được đa dạng món ăn cho cả gia đình. Nồi chiên được thiết kế bắt mắt, kết hợp với màu sắc trang nhã đem lại điểm nhấn nổi bật mang đến sự đẳng cấp, tiện nghi cho mọi không gian bếp.</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/qIfc42H.jpg</image>
+                <image>https://i.imgur.com/LevqWSm.jpg</image>
+                <image>https://i.imgur.com/jEANmcx.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Bộ Nồi Inox 3 Đáy Sunhouse SH334</name>
+            <price>469000</price>
+            <categories>118</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<h3><strong>Thiết kế&nbsp;tiện dụng</strong></h3>
+                <p><strong>Bộ nồi Inox 3 đáy Sunhouse SH334 </strong>với bộ 3 nồi kích cỡ khác nhau, được làm bằng chất liệu inox cao cấp,&nbsp;dẫn nhiệt nhanh chóng, giúp nấu chín thức ăn nhanh chóng, chất liệu siêu bền, kiểu dáng hiện đại.</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/BtKiTbA.jpg</image>
+                <image>https://i.imgur.com/6rLl3HX.jpg</image>
+            </images>
+        </product>
+
+
+        <product>
+            <name>Máy Ép Trái Cây Korihome JEK844R</name>
+            <price>2899000</price>
+            <categories>117</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[<h3>Thiết kế hiện đại</h3>
+                <p>Máy Ép Trái Cây Korihome JEK844R sở hữu thiết kế hiện đại, rất bắt mắt với màu sắc và kiểu dáng phối hợp hài hòa, thân máy được làm bằng nhựa cao cấp kết hợp với inox mang lại sự sang trọng cho không gian nhà bạn.</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/NjUiTfI.jpg</image>
+                <image>https://i.imgur.com/0YSN56b.jpg</image>
+                <image>https://i.imgur.com/54Y7Er7.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Máy Hút Bụi Panasonic MC-CL787TN49</name>
+            <price>3840000</price>
+            <categories>119</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[Thiết kế tiện dụng
+                    Máy hút bụi Panasonic MC-CL787TN49 thiết kế gọn gàng ít chiếm diện tích với trọng lượng cực nhẹ, dễ dàng di chuyển trong không gian chật hẹp, ít tốn sức lực.
+                    Công suất cao
+                    Máy có công suất hoạt động cao 2100W, lốc xoáy ly tâm bụi và duy trì luồng khí vào bộ lọc tạo lực hút mạnh mẽ để nhanh chóng hút sạch bụi bẩn và tiết kiệm điện năng tiêu thụ, thời gian dọn dẹp nhà cửa hiệu quả.
+                    ]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/VZdOpjI.jpg</image>
+                <image>https://i.imgur.com/zFEsJKe.jpg</image>
+                <image>https://i.imgur.com/YJlIeGU.jpg</image>
+            </images>
+        </product>
+    </products>
+</store>

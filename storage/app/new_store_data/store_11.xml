@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<store>
+    <logo>https://i.imgur.com/SHUB1RS.png</logo>
+    <color_main_1>#ffdc3e11</color_main_1>
+    <id>11</id>
+    <banners>
+        <banner>https://i.imgur.com/8xJOg78.jpg</banner>
+        <banner>https://i.imgur.com/jKq0cia.png</banner>
+    </banners>
+    <categories>
+        <category>
+            <id>105</id>
+            <name>Sữa, bỉm</name>
+            <image>https://i.imgur.com/oI2hSNj.png</image>
+        </category>
+        <category>
+            <id>108</id>
+            <name>Rau quả</name>
+            <image>https://i.imgur.com/Ol6n8F1.png</image>
+        </category>
+        <category>
+            <id>111</id>
+            <name>Sản phẩm nhập khẩu</name>
+            <image>https://i.imgur.com/ZLYZ5Qa.png</image>
+        </category>
+        <category>
+            <id>112</id>
+            <name>Hoa quả tươi</name>
+            <image>https://i.imgur.com/N2qIkON.jpg</image>
+        </category>
+        <category>
+            <id>113</id>
+            <name>Thực phẩm nhật bản</name>
+            <image>https://i.imgur.com/l8LHnUF.jpg</image>
+        </category>
+    </categories>
+
+    <!-- <home_buttons>
+        <home_button>
+            <title>Quét mã QR</title>
+            <type_action>QR</type_action>
+            <value></value>
+            <image_url></image_url>
+        </home_button>
+        <home_button>
+            <title>Sản phẩm giảm giá</title>
+            <type_action>PRODUCTS_DISCOUNT</type_action>
+            <value></value>
+            <image_url></image_url>
+        </home_button>
+        <home_button>
+            <title>Voucher</title>
+            <type_action>VOUCHER</type_action>
+            <value></value>
+            <image_url></image_url>
+        </home_button>
+        <home_button>
+            <title>Tích điểm</title>
+            <type_action>SCORE</type_action>
+            <value></value>
+            <image_url></image_url>
+        </home_button>
+        <home_button>
+            <title>Nhắn tin cho shop</title>
+            <type_action>MESSAGE_TO_SHOP</type_action>
+            <value></value>
+            <image_url></image_url>
+        </home_button>
+    </home_buttons> -->
+
+    <attributes>
+        <attribute>Xuất xứ</attribute>
+        <attribute>Thời hạn bảo hành</attribute>
+    </attributes>
+    <products>
+
+        <product>
+            <name>Sốt Ớt Đỏ TaBaSCo Pepper Sauce 60Ml</name>
+            <price>700000</price>
+            <categories>111</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]></description>
+            <images>
+                <image>https://i.imgur.com/JOtzvUz.png</image>
+            </images>
+            <!-- <list_distribute>
+                <distribute>
+                    <name>Màu</name>
+                    <element_distributes>
+                        <distribute>
+                            <name>Đỏ</name>
+                            <image_url>https://gaixinh24h.com/wp-content/uploads/2020/03/hinh-gai-dep-tu-nhien-gaixinh24h-7.jpg</image_url>
+                        </distribute>
+                        <distribute>
+                            <name>Xanh</name>
+                            <image_url>https://gaixinh24h.com/wp-content/uploads/2020/03/hinh-gai-dep-tu-nhien-gaixinh24h-7.jpg</image_url>
+                        </distribute>
+                        <distribute>
+                            <name>Vang</name>
+                            <image_url>https://gaixinh24h.com/wp-content/uploads/2020/03/hinh-gai-dep-tu-nhien-gaixinh24h-7.jpg</image_url>
+                        </distribute>
+                    </element_distributes>
+                </distribute>
+            </list_distribute> -->
+
+            <!-- <list_attribute>
+                <attribute>
+                    <name>Xuất xứ</name>
+                    <value>Xanh</value>
+                </attribute>
+                <attribute>
+                    <name>Màu</name>
+                    <value>Vàng</value>
+                </attribute>
+            </list_attribute> -->
+        </product>
+
+        <product>
+            <name>Qủa Anh Đào Ngâm Oregon Trail 3</name>
+            <price>550000</price>
+            <categories>111</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/6vPWyOm.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Sốt Cà Chua  Dành Cho Pizza</name>
+            <price>258000</price>
+            <categories>111</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/X5QLPzJ.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Trái Oliu Không Hạt KaLaMaTa Pitted 5000Ml</name>
+            <price>1216000</price>
+            <categories>111</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/xWmHpRp.png</image>
+            </images>
+        </product>
+
+
+        <product>
+            <name>Bột làm bánh Pizza FARINA DIVELLA</name>
+            <price>37000</price>
+            <categories>111</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/AUXnii3.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Bánh chocopie sữa chua 360g</name>
+            <price>52900</price>
+            <categories>111</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/IJRmfni.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Sữa Tiệt Trùng Có Đường</name>
+            <price>320000</price>
+            <categories>105</categories>
+            <quantity_in_stock>100</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/3oA1oD8.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Váng sữa Monte vỉ 4 hộpx55g</name>
+            <price>59900</price>
+            <categories>53</categories>
+            <quantity_in_stock>100</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/Zc2FjqH.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Xúc xích Winner CP gói 500g</name>
+            <price>61000</price>
+            <categories>111</categories>
+            <quantity_in_stock>100</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/05WOJPD.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Cá ngừ ngâm dầu Seaspimex</name>
+            <price>27000</price>
+            <categories>111</categories>
+            <quantity_in_stock>100</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/ej98QPN.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Hạt điều lụa VinMark Good hộp 225g</name>
+            <price>101000</price>
+            <categories>111</categories>
+            <quantity_in_stock>100</quantity_in_stock>
+            <description>
+                <![CDATA[<p><span>Đ&aacute;nh gi&aacute; Hạt điều lụa VinMart Good hộp 225g </span></p>
+                <p><span>Hạt điều l&agrave; một trong những thực phẩm đầy bổ dưỡng c&oacute; nguồn gốc từ thi&ecirc;n nhi&ecirc;n với đầy đủ c&aacute;c loại dưỡng chất protein, chất xơ bổ sung calo gi&uacute;p nạp đầy năng lượng cho người sử dụng sẵn s&agrave;ng cuộc sống năng động. </span></p>
+                <p><span>Hạt điều lụa VinMart Good hộp 225g M&oacute;n ăn Hạt điều lụa VinMart Good hộp 225g nhiều chất dinh dưỡng c&ugrave;ng vị ngon kh&oacute; cưỡng c&oacute; thể sẽ l&agrave; m&oacute;n ăn vặt ho&agrave;n hảo d&agrave;nh cho cả gia đ&igrave;nh. </span></p>
+                <p><span>V&igrave; t&iacute;nh chất dễ d&agrave;ng sử dụng, người d&ugrave;ng sử dụng sản phẩm trực tiếp ngay sau khi mở hộp Bảo quản nơi kh&ocirc; r&aacute;o, tr&aacute;nh &aacute;nh nắng trực tiếp. Sản phẩm c&oacute; thể sử dụng nhiều lần n&ecirc;n người d&ugrave;ng cần bọc k&iacute;n cẩn thận để giữ được vị gi&ograve;n ngon cho sản phẩm.</span></p>
+                <p></p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/UfwGtpa.png</image>
+            </images>
+        </product>
+
+    </products>
+</store>

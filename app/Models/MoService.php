@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use App\Helper\ServiceUnitDefineCode;
+use App\Models\Base\BaseModel;
+
+class MoService extends BaseModel
+{
+    use HasFactory;
+    protected $guarded = [];
+
+    protected $hidden = ['created_at', 'updated_at'];
+
+    protected $appends = ['name_type_unit'];
+
+    public function getNameTypeUnitAttribute()
+    {
+        return ServiceUnitDefineCode::getServiceUnitCode($this->type_unit, false);
+    }
+
+    public function getImagesAttribute($value)
+    {
+        return json_decode($value);
+    }
+}

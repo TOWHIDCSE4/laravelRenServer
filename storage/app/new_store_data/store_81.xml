@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<store>
+    <logo>https://data1.doapp.vn/public/api/SahaImages/PrhiNTjlGU1633340543.png</logo>
+    <color_main_1>#179ccd</color_main_1>
+    <id>81</id>
+    <banners>
+        <banner>https://data1.doapp.vn/public/api/SahaImages/KBADbooyBv1633319809.jpg</banner>
+        <banner>https://i.imgur.com/SlAgOFY.jpg</banner>
+        <banner>https://data1.doapp.vn/public/api/SahaImages/VxHDLwjXzK1633336326.jpg</banner>
+        <banner>https://i.imgur.com/O1nXxjG.jpg</banner>
+    </banners>
+    <categories>
+	<category>
+            <id>145</id>
+            <name>Rau - củ - trái cây</name>
+            <image>http://data1.sahavi.vn/public/api/SahaImages/IrcOEiGeWm1631159881.png</image>
+        </category>
+        <category>
+            <id>146</id>
+            <name>Thịt - cá - trứng</name>
+            <image>http://data1.sahavi.vn/public/api/SahaImages/jXSoXPrJZs1631159903.png</image>
+        </category>
+       <category>
+            <id>147</id>
+            <name>Đồ dùng ăn uống</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/SNrmvEvrVZ1633320529.jpg</image>
+        </category>
+        <category>
+            <id>148</id>
+            <name>Bỉm tã và vệ sinh</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/blFLrKwELZ1633320558.jpg</image>
+        </category>
+        <category>
+            <id>149</id>
+            <name>Đồ sơ sinh</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/eHtmpqTadS1633320677.jpg</image>
+        </category>
+        <category>
+            <id>150</id>
+            <name>Giặt xả tắm gội</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/upprZTAmUl1633320698.jpg</image>
+        </category>
+        <category>
+            <id>151</id>
+            <name>Xe đai địu</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/QllXcPbQwV1633320744.jpg</image>
+        </category>
+        <category>
+            <id>152</id>
+            <name>Sữa và thực phẩm</name>
+            <image>https://data1.doapp.vn/public/api/SahaImages/keMPPHEcpt1633320793.jpg</image>
+        </category>
+    </categories>
+  
+    <attributes>
+        <attribute>Xuất xứ</attribute>
+        <attribute>Thời hạn bảo hành</attribute>
+    </attributes>
+    <products>
+        <product>
+            <name>Cải thảo 500g</name>
+            <price>8600</price>
+            <categories>145</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://i.imgur.com/YsPeUqU.jpg</image>
+            </images>           
+        </product>
+        <product>
+            <name>Cà rốt 500g</name>
+            <price>14900</price>
+            <categories>145</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://i.imgur.com/wFxSHGu.jpg</image>
+            </images>           
+        </product>
+        <product>
+            <name>Táo đỏ siêu ngon</name>
+            <price>80000</price>
+            <categories>145</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>http://data1.sahavi.vn/public/api/SahaImages/xyTjNLxKQw1631160117.png</image>
+            </images>           
+        </product>
+        <product>
+            <name>Nho Xanh nhập khẩu</name>
+            <price>120000</price>
+            <categories>145</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>http://data1.sahavi.vn/public/api/SahaImages/LLNVDETMxN1631160204.png</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Xương ống heo Meat Deli 450g</name>
+            <price>22450</price>
+            <categories>146</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://i.imgur.com/rlvXhv8.jpg</image>
+            </images>           
+        </product>
+        <product>
+            <name>Thịt nạc vai heo MeatDeli 300g</name>
+            <price>53900</price>
+            <categories>146</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://i.imgur.com/w8gKGnv.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Bình tập uống nước Kid Mama 270ml</name>
+            <price>230000</price>
+            <categories>147</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/eROLujRaba1633335198.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Bình uống nước 50ml Pigeon</name>
+            <price>276250</price>
+            <categories>147</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/BzXHHlbXYQ1633335304.jpg</image>
+            </images>           
+        </product>
+        <product>
+            <name>Bỉm tã quần Huggies</name>
+            <price>99000</price>
+            <categories>148</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/cmNVtBwzMx1633335712.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Set quà tặng Otis in hình</name>
+            <price>318750</price>
+            <categories>149</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/MQPDLkFoIa1633335769.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Thau tắm trẻ em kèm tựa Notoro</name>
+            <price>299000</price>
+            <categories>150</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/qMJjcrQCbk1633338234.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Ghế ngồi oto và nôi xách</name>
+            <price>1148000</price>
+            <categories>151</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/psFoZmHOXM1633335813.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Xe tập đi Mamago</name>
+            <price>841500</price>
+            <categories>151</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/SaRxiVNhBH1633335843.jpg</image>
+            </images>           
+        </product>
+
+        <product>
+            <name>Bột ăn dặm HiPP 250g cho bé 6M+</name>
+            <price>106250</price>
+            <categories>152</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>Nội dung đang cập nhật</p>]]></description>
+            <images>
+                <image>https://data1.doapp.vn/public/api/SahaImages/yVkFnPuQHs1633335631.jpg</image>
+            </images>           
+        </product>
+
+
+    </products>
+</store>

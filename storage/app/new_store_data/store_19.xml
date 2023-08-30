@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<store>
+    <logo>https://i.imgur.com/58l4nA3.png</logo>
+    <color_main_1>#ffdc3e11</color_main_1>
+    <id>19</id>
+    <banners>
+        <banner>https://i.imgur.com/WmmkdYn.jpg</banner>
+        <banner>https://i.imgur.com/Q6I1hbO.jpg</banner>
+    </banners>
+    <categories>
+        <category>
+            <id>120</id>
+            <name>ÔTô Vinfast</name>
+            <image>https://i.imgur.com/WtNiGBA.jpg</image>
+        </category>
+        <category>
+            <id>121</id>
+            <name>Xe máy</name>
+            <image>https://i.imgur.com/EwvYYoA.png</image>
+        </category>
+        <category>
+            <id>122</id>
+            <name>Honda</name>
+            <image>https://i.imgur.com/xi808aA.jpg</image>
+        </category>
+        <category>
+            <id>123</id>
+            <name>Yamaha</name>
+            <image>https://i.imgur.com/aEfGSc2.png</image>
+        </category>
+        <category>
+            <id>124</id>
+            <name>Moto</name>
+            <image>https://i.imgur.com/IURqeJH.png</image>
+        </category>
+    </categories>
+
+  
+    <attributes>
+        <attribute>Xuất xứ</attribute>
+        <attribute>Thời hạn bảo hành</attribute>
+    </attributes>
+    <products>
+
+        <product>
+            <name>Xe LUX SA2.0</name>
+            <price>1126000000</price>
+            <categories>120</categories>
+            <quantity_in_stock>500</quantity_in_stock>
+            <description><![CDATA[<p>
+                                        Đột phá trong từng đường nét thiết kế, đón đầu xu hướng thời thượng nhưng vẫn mang đậm bản sắc Việt, LUX SA2.0 hứa hẹn trở thành một hiện tượng mới trên đường phố, chinh phục mọi ánh nhìn.
+                                    </p>]]></description>
+            <images>
+                <image>https://i.imgur.com/G9McxJu.png</image>
+                <image>https://i.imgur.com/EyWc6uD.png</image>
+                <image>https://i.imgur.com/NpZ7DHa.png</image>
+                <image>https://i.imgur.com/pOQenI6.png</image>
+            </images>
+            
+        </product>
+
+        <product>
+            <name>Xe LUX A2.0</name>
+            <price>851695000</price>
+            <categories>120</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p>
+                                        Sự kết hợp giữa dáng vẻ khỏe khoắn và cấu trúc hoàn hảo của ngoại thất tạo nên điểm nhấn sang trọng nhưng vẫn đầy tinh tế cho LUX A2.0, thổi làn gió mới vào thiết kế đặc hữu của dòng sedan thông thường.
+                                    </p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/LoGmbSf.png</image>
+                <image>https://i.imgur.com/cOBO9lG.png</image>
+                <image>https://i.imgur.com/VHWCULA.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Xe Fadil</name>
+            <price>382500000</price>
+            <categories>120</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p>
+                                        Các đường nét thiết kế mang hơi thở châu Âu hòa quyện cùng những điểm nhấn đặc trưng của tinh thần Việt tạo nên một mẫu hatchback lý tưởng cho đô thị, nhỏ gọn và thông minh, sẵn sàng chinh phục mọi cung đường thành phố.
+                                    </p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/6VOelHc.png</image>
+                <image>https://i.imgur.com/u2yrF0H.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Xe máy điện Impes</name>
+            <price>14900000</price>
+            <categories>121</categories>
+            <quantity_in_stock>10000</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Chuẩn thần thái khi xuống phố với kiểu dáng mạnh mẽ và khả năng vận hành thể thao ấn tượng</p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/ABhipcY.png</image>
+            </images>
+        </product>
+
+
+        <product>
+            <name>Xe máy điện Feliz</name>
+            <price>24900000</price>
+            <categories>121</categories>
+            <quantity_in_stock>500</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Biểu tượng của cuộc sống năng động - hiện đại và thân thiện với môi trường.</p>
+                Tinh hoa thiết kế Ý
+                Lấy nguồn cảm hứng từ những viên kim cương lấp lánh, trường tồn, đã mang đến thiết kế hài hòa, độc đáo cho Klara S, vừa mạnh mẽ, thanh lịch, kiêu hãnh, vừa thân thiện với người sử dụng.]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/eiJ8ikP.png</image>
+                <image>https://i.imgur.com/ys4g34s.png</image>
+                <image>https://i.imgur.com/ef04TGC.png</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Xe máy điện Theon</name>
+            <price>63900000</price>
+            <categories>121</categories>
+            <quantity_in_stock>500</quantity_in_stock>
+            <description>
+                <![CDATA[<p>VINFAST THEON
+                CÔNG NGHỆ BỨT PHÁ - TRẢI NGHIỆM ĐỈNH CAO</p>
+                THIẾT KẾ
+                Kiểu dáng hiện đại, thể thao được phát triển bởi đơn vị thiết kế danh tiếng thế giới Kiska.]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/EENV2Ba.png</image>
+                <image>https://i.imgur.com/zEAYosW.png</image>
+                <image>https://i.imgur.com/xTp3b8b.png</image>
+            </images>
+        </product>
+    </products>
+</store>

@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<store>
+    <logo>https://i.imgur.com/AIZRUaK.png</logo>
+    <color_main_1>#ffdc3e11</color_main_1>
+    <id>15</id>
+    <banners>
+        <banner>https://i.imgur.com/E1plTNS.jpg</banner>
+        <banner>https://i.imgur.com/SlAgOFY.jpg</banner>
+        <banner>https://i.imgur.com/O1nXxjG.jpg</banner>
+    </banners>
+    <categories>
+       <category>
+            <id>129</id>
+            <name>Thịt</name>
+            <image>https://i.imgur.com/TkgaCe0.jpg</image>
+        </category>
+        <category>
+            <id>130</id>
+            <name>Rau, củ</name>
+            <image>https://i.imgur.com/YGufKTT.png</image>
+        </category>
+        <category>
+            <id>131</id>
+            <name>Rau quả</name>
+            <image>https://i.imgur.com/Ol6n8F1.png</image>
+        </category>
+        <category>
+            <id>132</id>
+            <name>Sản phẩm nhập khẩu</name>
+            <image>https://i.imgur.com/ZLYZ5Qa.png</image>
+        </category>
+        <category>
+            <id>133</id>
+            <name>Hoa quả tươi</name>
+            <image>https://i.imgur.com/N2qIkON.jpg</image>
+        </category>
+        <category>
+            <id>134</id>
+            <name>Thực phẩm nhật bản</name>
+            <image>https://i.imgur.com/l8LHnUF.jpg</image>
+        </category>
+    </categories>
+  
+    <attributes>
+        <attribute>Xuất xứ</attribute>
+        <attribute>Thời hạn bảo hành</attribute>
+    </attributes>
+    <products>
+        <product>
+            <name>Cải thảo 500g</name>
+            <price>8600</price>
+            <categories>129</categories>
+            <quantity_in_stock>50</quantity_in_stock>
+            <description><![CDATA[<p>
+                Lưu ý:
+                    - Hạn sử dụng thực tế quý khách vui lòng xem trên bao bì.
+                    - Hình sản phẩm chỉ mang tính chất minh họa, hình bao bì của sản phẩm tùy thời điểm sẽ khác so với thực tế.
+                </p>]]></description>
+            <images>
+                <image>https://i.imgur.com/YsPeUqU.jpg</image>
+            </images>
+            
+        </product>
+
+        <product>
+            <name>Cải ngọt L1 VinEco 500g</name>
+            <price>19700</price>
+            <categories>129</categories>
+            <quantity_in_stock>100</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Cải ngọt L1 VinEco có chứa chất đường, vitamin B1, axit pamic, coban, i-ốt. Rễ và lá có nhiều chất kiềm thúc đẩy sự tiêu hoá, thúc đẩy cơ thể tiếp thu albumin bảo vệ gan, chống mỡ trong gan. Hơn nữa, Ăn nhiều rau cải ngọt có tác dụng ngăn ngừa ung thư gan và kết hợp hỗ trợ điều trị bệnh ung thư và xơ cứng gan.
+                            </p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/RHK9z2w.jpg</image>
+                <image>https://i.imgur.com/oOxD1QJ.jpg</image>
+            </images>
+        </product>
+        <product>
+            <name>Cà rốt 500g</name>
+            <price>14900</price>
+            <categories>129</categories>
+            <quantity_in_stock>500</quantity_in_stock>
+            <description><![CDATA[<p>
+                Lưu ý:
+                    - Hạn sử dụng thực tế quý khách vui lòng xem trên bao bì.
+                    - Hình sản phẩm chỉ mang tính chất minh họa, hình bao bì của sản phẩm tùy thời điểm sẽ khác so với thực tế.
+                </p>]]></description>
+            <images>
+                <image>https://i.imgur.com/wFxSHGu.jpg</image>
+            </images>
+            
+        </product>
+
+        <product>
+            <name>Xương ống heo Meat Deli 450g</name>
+            <price>22450</price>
+            <categories>130</categories>
+            <quantity_in_stock>100</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Đánh giá MEATDeli Xương ống heo (S) 
+                        Meat Deli thương hiệu thịt sạch áp dụng Công Nghệ Oxy Fresh 9 đến từ Châu Âu mang tới những sản phẩm đảm bảo an toàn chất lượng tới tận tay người tiêu dùng. Khép kín mọi công đoạn giúp nâng cao dinh dưỡng trong bữa ăn của mỗi gia đình.  </p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/rlvXhv8.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Thịt nạc vai heo MeatDeli 300g</name>
+            <price>53900</price>
+            <categories>130</categories>
+            <quantity_in_stock>100</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Thịt nạc vai heo MeatDeli 300g được sản xuất bởi thương hiệu Meat Deli - là thương hiệu thịt sạch áp dụng Công Nghệ Oxy Fresh 9 đến từ Châu Âu mang tới những sản phẩm đảm bảo an toàn chất lượng tới tận tay người tiêu dùng. Khép kín mọi công đoạn giúp nâng cao dinh dưỡng trong bữa ăn của mỗi gia đình.    </p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/w8gKGnv.jpg</image>
+                <image>https://i.imgur.com/9eTmL9b.jpg</image>
+                <image>https://i.imgur.com/9MX4nQq.jpg</image>
+            </images>
+        </product>
+
+        <product>
+            <name>Nghêu sạch Lenger khay 1.2kg</name>
+            <price>62500</price>
+            <categories>130</categories>
+            <quantity_in_stock>100</quantity_in_stock>
+            <description>
+                <![CDATA[<p>Nghêu là thực phẩm quen thuộc của hầu hết người dân Việt Nam, nghêu có thể chế biến được nhiều món trong bữa ăn hàng ngày như nghêu hấp sả, canh nghêu kim chi, nghêu xào húng quế, nghêu nướng, cháo nghêu...
+                </p>]]>
+            </description>
+            <images>
+                <image>https://i.imgur.com/irYp4V5.jpg</image>
+            </images>
+        </product>
+
+    </products>
+</store>
