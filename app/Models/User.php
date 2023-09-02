@@ -143,4 +143,9 @@ class User extends Authenticatable
         }
         return null;
     }
+
+    public function wallet()
+    {
+        return $this->hasOne(EWalletCollaborator::class, 'user_id');
+    }
 }

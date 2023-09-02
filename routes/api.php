@@ -78,7 +78,7 @@ Route::middleware(["mid_res"])
 
             Route::get('config_admins', 'App\Http\Controllers\Api\Admin\ConfigAdminController@getAdminConfig');
 
-            //Đăng nhập social  
+            //Đăng nhập social
             Route::group(['middleware' => ['web']], function () {
                 Route::get('redirect/{provider}', 'App\Http\Controllers\Api\User\LoginController@redirect');
                 Route::get('callback/{provider}', 'App\Http\Controllers\Api\User\LoginController@callback');
@@ -101,10 +101,10 @@ Route::middleware(["mid_res"])
             Route::get('notifications_history', 'App\Http\Controllers\Api\NotificationUserController@getAll')->middleware('user_auth', 'check_phone_number');
             Route::post('notifications_history', 'App\Http\Controllers\Api\NotificationUserController@readAll')->middleware('user_auth', 'check_phone_number');
             Route::post('notifications_history/{notification_id}', 'App\Http\Controllers\Api\NotificationUserController@readANoti')->middleware('user_auth', 'check_phone_number');
-            //Lấy thông báo theo userIds 
+            //Lấy thông báo theo userIds
             Route::get('noti_unread', 'App\Http\Controllers\Api\NotificationUserController@getNotiUnread');
 
-            //Handle Receiver Sms 
+            //Handle Receiver Sms
             Route::get('handle_receiver_sms', 'App\Http\Controllers\Api\HandleReceiverSmsController@handle');
             //send email otp
             Route::post('send_email_otp', 'App\Http\Controllers\Api\SendMailController@send_email_otp');
@@ -139,7 +139,7 @@ Route::middleware(["mid_res"])
                 //Lấy bài đăng ở gần vị trí nhất
                 Route::post('/post_loca_nearest', 'App\Http\Controllers\Api\User\Community\HomeController@getPostLocationNearest');
 
-                //Statistic post call 
+                //Statistic post call
                 Route::post('statistic_call_post/{post_id}', 'App\Http\Controllers\Api\User\Community\StatisticAdminController@addCallMoPost');
                 Route::post('call_post_find_motel/{post_find_motel_id}', 'App\Http\Controllers\Api\User\Community\StatisticAdminController@addCallMoPostFindMotel');
                 Route::post('call_post_roommate/{post_roommate_id}', 'App\Http\Controllers\Api\User\Community\StatisticAdminController@addCallMoPostFindRoommate');
@@ -549,7 +549,7 @@ Route::middleware(["mid_res"])
             //Users update needle
             Route::put('/users/{user_id}', 'App\Http\Controllers\Api\Admin\UserController@updateUser')->middleware('admin_auth', 'permission_admin');
 
-            //Report statistic 
+            //Report statistic
             Route::get('/report_statistic/badges', 'App\Http\Controllers\Api\Admin\AdminReportStatisticController@badges')->middleware('admin_auth', 'permission_admin');
             Route::get('/report_statistic/statistic_resolved_problem', 'App\Http\Controllers\Api\Admin\AdminReportStatisticController@getMinutesResolvedProblemHost')->middleware('admin_auth', 'permission_admin');
             Route::get('/report_statistic/orders', 'App\Http\Controllers\Api\Admin\AdminReportStatisticController@getOrdersService')->middleware('admin_auth', 'permission_admin');
@@ -577,7 +577,7 @@ Route::middleware(["mid_res"])
             Route::get('/report_statistic/potential_to_renters', [AdminReportStatisticController::class, 'getPotentialToRenters'])->middleware('admin_auth', 'permission_admin');
             Route::get('/report_statistic/potential_has_motels', [AdminReportStatisticController::class, 'getPotentialHasMotel'])->middleware('admin_auth', 'permission_admin');
 
-            //Report problem 
+            //Report problem
             Route::get('/report_problem', 'App\Http\Controllers\Api\Admin\AdminReportProblemController@getAll')->middleware('admin_auth', 'permission_admin');
 
             //Danh sách tin nhắn chat
@@ -640,30 +640,36 @@ Route::middleware(["mid_res"])
             Route::get('/deposits', 'App\Http\Controllers\Api\Admin\WalletTransactionController@getAllWalletDeposit')->middleware('user_auth', 'permission_admin');
             Route::put('/deposit/edit/{wallet_transaction_id}', 'App\Http\Controllers\Api\Admin\WalletTransactionController@editWalletDeposit')->middleware('user_auth', 'permission_admin');
 
-            // Wallet withdrows  
+            // Wallet withdrows
             Route::post('/withdraws', 'App\Http\Controllers\Api\Admin\WalletTransactionController@createWalletWithdraws')->middleware('user_auth', 'permission_admin');
             Route::get('/withdraws', 'App\Http\Controllers\Api\Admin\WalletTransactionController@getAllWalletWithdraws')->middleware('user_auth', 'permission_admin');
             Route::put('/withdraw/edit/{wallet_transaction_id}', 'App\Http\Controllers\Api\Admin\WalletTransactionController@editWalletWithdrow')->middleware('user_auth', 'permission_admin');
-           
-            // admin review 
+
+            // admin review
             Route::post('/confirm-payment-status', 'App\Http\Controllers\Api\Admin\WallentTransactionAdminReviewController@confirmPaymentStatusAdmin')->middleware('user_auth', 'permission_admin');
             // Route::get('/wallet-data-for-graph', 'App\Http\Controllers\Api\Admin\WallentTransactionAdminReviewController@getWalletDataForGraph')->middleware('user_auth', 'permission_admin');
             Route::get('/wallet-data-for-graph', 'App\Http\Controllers\Api\Admin\WallentTransactionAdminReviewController@getWalletDataForGraph')->middleware('user_auth', 'permission_admin');
-            
+
             // Route for Wallet Transaction Bank List
             Route::get('/getWalletTransactionBankList', 'App\Http\Controllers\Api\Admin\WalletTransactionBankListController@getAllBankList')->middleware('user_auth', 'permission_admin');
             // Route for get Tower by User id
             // Route::get('/getAllTower/{userId}', 'App\Http\Controllers\Api\User\Manage\TowerController@getUserWiseAllTower')->middleware('user_auth', 'permission_admin');
 
             Route::get('/get-all-tower/{userId}', 'App\Http\Controllers\Api\User\Manage\TowerController@getUserWiseAllTower')->middleware('user_auth', 'permission_admin');
-            // Route for Tower room hidden or unhidden 
+            // Route for Tower room hidden or unhidden
             Route::put('/update-tower-motel/{motel_id}', 'App\Http\Controllers\Api\User\Manage\TowerMotelController@updateTowerByRoom')->middleware('user_auth', 'permission_admin');
 
-            // is my last message 
+            // is my last message
             Route::get('/user/community/person_chat/{user_id}', 'App\Http\Controllers\Api\Admin\AdminMessageController@getLatestMessage')->middleware('user_auth', 'permission_admin');
 
 
         });
+
+        //Virtual Account
+        Route::post('/virtual-account/create', 'App\Http\Controllers\PaymentMethod\NinePayController@createVirtualAccount')->middleware('user_auth');
+        Route::post('/virtual-account/update', 'App\Http\Controllers\PaymentMethod\NinePayController@updateVirtualAccount')->middleware('user_auth');
+        Route::post('/virtual-account/info', 'App\Http\Controllers\PaymentMethod\NinePayController@infoVirtualAccount')->middleware('user_auth');
+
         Route::post('/payments-create','App\Http\Controllers\PaymentMethod\NinePayController@paymentCreate')->middleware('user_auth', 'permission_admin');
         Route::get('/inquire','App\Http\Controllers\PaymentMethod\NinePayController@inquire')->middleware('user_auth', 'permission_admin');
         Route::post('/refunds-create' ,'App\Http\Controllers\PaymentMethod\NinePayController@refundCreate')->middleware('user_auth', 'permission_admin');

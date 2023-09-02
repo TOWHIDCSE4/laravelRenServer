@@ -9,12 +9,15 @@ use App\Jobs\PushNotificationUserJob;
 use App\Models\Order;
 use App\Models\OrderRecord;
 use App\Models\StatusPaymentHistory;
+use App\Models\User;
+use App\Models\VirtualAccount;
 use Illuminate\Http\Request;
 use App\Jobs\PushNotificationJob;
 use App\Models\UserDeviceToken;
 // use App\Traits\NinePay;
 use App\Http\Controllers\PaymentMethod\lib\HMACSignature;
 use  App\Http\Controllers\PaymentMethod\lib\MessageBuilder;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * @group  Customer/thanh toán onpay
@@ -222,4 +225,176 @@ class NinePayController extends Controller
         }
         return \base64_decode(\strtr($input, '-_', '+/'));
     }
+
+
+    // Create Virtual Account (VA)
+    public function createVirtualAccount(Request $request)
+    {
+        $request_id = $request->request_id;
+        $uid = $request->user->id;
+        $uname = $request->uname;
+        $bank_code = $request->bank_code;
+        $request_amount = $request->request_amount;
+
+        $available_balance = 0;
+        if($request->user->wallet){
+            $available_balance = $request->user->wallet->account_balance;
+        }
+
+        if ($available_balance < $request_amount) {
+            return response()->json(['status' => '0', 'msg' => 'Insufficient Wallet Balance.']);
+        }
+
+        $time = time();
+        $virtual_account_param = [
+            "request_id" => $request_id,
+            "uid" => $uid,
+            "uname" => $uname,
+            "bank_code" => $bank_code,
+            "request_amount" => $request_amount,
+        ];
+
+        $message = MessageBuilder::instance()
+            ->with($time, self::END_POINT . '/va/create', 'POST')
+            ->withParams($virtual_account_param)
+            ->build();
+
+        $hmacs = new HMACSignature();
+        $signature = $hmacs->sign($message, self::MERCHANT_SECRET_KEY);
+
+        $headers = array(
+            'Date: ' . $time,
+            'Authorization: Signature Algorithm=HS256,Credential=' . self::MERCHANT_KEY . ',SignedHeaders=,Signature=' . $signature
+        );
+
+        $response = self::callAPI('POST', self::END_POINT . '/va/create', $virtual_account_param, $headers);
+        $response_data = json_decode($response);
+
+        if(isset($response_data->status) && $response_data->status == 5){
+            $virtual_account = VirtualAccount::query()
+                ->create([
+                    'user_id'=> $uid,
+                    'request_id'=> $request_id,
+                    'bank_code'=> $bank_code,
+                    'request_amount'=> $request_amount,
+                    'bank_account_name'=> $response->data->bank_account_name,
+                    'qr_code_url'=> $response->data->qr_code_url,
+                ]);
+        }
+
+        echo 'HEADERs:';
+        print_r($headers);
+        echo '<hr>RESULT:';
+        print_r($response);
+    }
+    //  Update Virtual Account (VA)
+    public function updateVirtualAccount(Request $request)
+    {
+        $request_id = $request->request_id;
+        $uid = $request->user->id;
+        $uname = $request->uname;
+        $bank_code = $request->bank_code;
+        $request_amount = $request->request_amount;
+        $is_active = $request->is_active;
+
+        $available_balance = 0;
+        if($request->user->wallet){
+            $available_balance = $request->user->wallet->account_balance;
+        }
+
+        if ($available_balance < $request_amount) {
+            return response()->json(['status' => '0', 'msg' => 'Insufficient Wallet Balance.']);
+        }
+
+        $time = time();
+        $virtual_account_param = [
+            "request_id" => $request_id,
+            "uid" => $uid,
+            "uname" => $uname,
+            "bank_code" => $bank_code,
+            "request_amount" => $request_amount,
+            "is_active" => $is_active,
+        ];
+
+        $message = MessageBuilder::instance()
+            ->with($time, self::END_POINT . '/va/update', 'POST')
+            ->withParams($virtual_account_param)
+            ->build();
+
+        $hmacs = new HMACSignature();
+        $signature = $hmacs->sign($message, self::MERCHANT_SECRET_KEY);
+
+        $headers = array(
+            'Date: ' . $time,
+            'Authorization: Signature Algorithm=HS256,Credential=' . self::MERCHANT_KEY . ',SignedHeaders=,Signature=' . $signature
+        );
+
+        $response = self::callAPI('POST', self::END_POINT . '/va/update', $virtual_account_param, $headers);
+        $response_data = json_decode($response);
+
+        if(isset($response_data->status) && $response_data->status == 5){
+            $response = VirtualAccount::query()
+                ->where('user_id', $uid)
+                ->update([
+                    'user_id'=> $uid,
+                    'request_id'=> $request_id,
+                    'bank_code'=> $bank_code,
+                    'request_amount'=> $request_amount,
+                    'is_active'=> $is_active,
+                    'bank_account_name'=> $response_data->data->bank_account_name,
+                    'qr_code_url'=> $response_data->data->qr_code_url,
+                ]);
+        }
+
+        echo 'HEADERs:';
+        print_r($headers);
+        echo '<hr>RESULT:';
+        print_r($response);
+    }
+
+    //  Query Virtual Account info
+    public function VirtualAccountInfo(Request $request)
+    {
+        $uid = $request->user->id;
+        $bank_code = $request->bank_code;
+
+        $time = time();
+        $virtual_account_param = [
+            "uid" => $uid,
+            "bank_code" => $bank_code,
+        ];
+
+        $message = MessageBuilder::instance()
+            ->with($time, self::END_POINT . '/va/info', 'POST')
+            ->withParams($virtual_account_param)
+            ->build();
+
+        $hmacs = new HMACSignature();
+        $signature = $hmacs->sign($message, self::MERCHANT_SECRET_KEY);
+
+        $headers = array(
+            'Date: ' . $time,
+            'Authorization: Signature Algorithm=HS256,Credential=' . self::MERCHANT_KEY . ',SignedHeaders=,Signature=' . $signature
+        );
+
+        $response = self::callAPI('POST', self::END_POINT . '/va/info', $virtual_account_param, $headers);
+        $response_data = json_decode($response);
+
+        if(isset($response_data->status) && $response_data->status == 5){
+            VirtualAccount::query()
+                ->where('user_id', $uid)
+                ->update([
+                    'user_id'=> $uid,
+                    'bank_code'=> $bank_code,
+                ]);
+        }
+
+        echo 'HEADERs:';
+        print_r($headers);
+        echo '<hr>RESULT:';
+        print_r($response);
+
+    }
+
+
 }
