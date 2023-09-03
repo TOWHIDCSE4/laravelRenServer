@@ -231,7 +231,7 @@ class NinePayController extends Controller
     public function createVirtualAccount(Request $request)
     {
         $request_id = $request->request_id;
-        $uid = $request->user->id;
+        $uid = 2;
         $uname = $request->uname;
         $bank_code = $request->bank_code;
         $request_amount = $request->request_amount;
@@ -353,7 +353,7 @@ class NinePayController extends Controller
     }
 
     //  Query Virtual Account info
-    public function VirtualAccountInfo(Request $request)
+    public function infoVirtualAccount(Request $request)
     {
         $uid = $request->user->id;
         $bank_code = $request->bank_code;
