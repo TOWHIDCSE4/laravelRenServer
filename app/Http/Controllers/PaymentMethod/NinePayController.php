@@ -18,6 +18,7 @@ use App\Models\UserDeviceToken;
 use App\Http\Controllers\PaymentMethod\lib\HMACSignature;
 use  App\Http\Controllers\PaymentMethod\lib\MessageBuilder;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 /**
  * @group  Customer/thanh toán onpay
@@ -231,7 +232,7 @@ class NinePayController extends Controller
     public function createVirtualAccount(Request $request)
     {
         $request_id = $request->request_id;
-        $uid = 2;
+        $uid = $request->user->id;
         $uname = $request->uname;
         $bank_code = $request->bank_code;
         $request_amount = $request->request_amount;
@@ -331,6 +332,8 @@ class NinePayController extends Controller
 
         $response = self::callAPI('POST', self::END_POINT . '/va/update', $virtual_account_param, $headers);
         $response_data = json_decode($response);
+
+        Log::info(json_encode($response_data));
 
         if(isset($response_data->status) && $response_data->status == 5){
             $response = VirtualAccount::query()
