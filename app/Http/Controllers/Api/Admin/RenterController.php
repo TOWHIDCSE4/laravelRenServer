@@ -20,11 +20,11 @@ use Illuminate\Support\Facades\DB;
 
 class RenterController extends Controller
 {
-    
+
     /**
-     * 
+     *
      * Thêm 1 người thuê
-     * 
+     *
      * @bodyParam name string tên người đại diện
      * @bodyParam phone_number string tên người đại diện
      * @bodyParam email string tên người đại diện
@@ -32,7 +32,7 @@ class RenterController extends Controller
      * @bodyParam cmnd_front_image_url string tên người đại diện
      * @bodyParam cmnd_back_image_url string tên người đại diện
      * @bodyParam address string tên người đại diện
-     * 
+     *
      */
     public function createMaster(Request $request)
     {
@@ -76,7 +76,7 @@ class RenterController extends Controller
                 "phone_number" => $request->phone_number ?: $renterExist->phone_number,
                 "email" => $request->email ?: $renterExist->email,
                 "cmnd_number" => $request->cmnd_number ?: $renterExist->cmnd_number,
-                "cmnd_front_image_url"  => $request->cmnd_front_image_url ?: $renterExist->cmnd_front_image_url,
+                "cmnd_front_image_url" => $request->cmnd_front_image_url ?: $renterExist->cmnd_front_image_url,
                 "cmnd_back_image_url" => $request->cmnd_back_image_url ?: $renterExist->cmnd_back_image_url,
                 "address" => $request->address ?: $renterExist->address,
                 "image_url" => ($request->image_url == null ? "https://data3gohomy.ikitech.vn/api/SHImages/ODLzIFikis1681367637.jpg" : $request->image_url) ?: $renterExist->image_url,
@@ -115,7 +115,7 @@ class RenterController extends Controller
         //         'msg_code' => MsgCode::CODE_CITIZEN_IDENTIFICATION_ALREADY_EXISTS[0],
         //         'msg' => MsgCode::CODE_CITIZEN_IDENTIFICATION_ALREADY_EXISTS[1],
         //     ]);
-        // }        
+        // }
         DB::beginTransaction();
         try {
             $renter_created = Renter::create([
@@ -124,7 +124,7 @@ class RenterController extends Controller
                 "phone_number" => $request->phone_number,
                 "email" => $request->email,
                 "cmnd_number" => $request->cmnd_number,
-                "cmnd_front_image_url"  => $request->cmnd_front_image_url,
+                "cmnd_front_image_url" => $request->cmnd_front_image_url,
                 "cmnd_back_image_url" => $request->cmnd_back_image_url,
                 "image_url" => $request->image_url ?? "https://data3gohomy.ikitech.vn/api/SHImages/ODLzIFikis1681367637.jpg",
                 "address" => $request->address,
@@ -150,10 +150,11 @@ class RenterController extends Controller
             'data' => $renter_created,
         ]);
     }
+
     /**
-     * 
+     *
      * Thêm 1 người thuê
-     * 
+     *
      * @bodyParam name string tên người đại diện
      * @bodyParam phone_number string tên người đại diện
      * @bodyParam email string tên người đại diện
@@ -161,7 +162,7 @@ class RenterController extends Controller
      * @bodyParam cmnd_front_image_url string tên người đại diện
      * @bodyParam cmnd_back_image_url string tên người đại diện
      * @bodyParam address string tên người đại diện
-     * 
+     *
      */
     public function create(Request $request)
     {
@@ -205,7 +206,7 @@ class RenterController extends Controller
                 "phone_number" => $request->phone_number ?: $renterExist->phone_number,
                 "email" => $request->email ?: $renterExist->email,
                 "cmnd_number" => $request->cmnd_number ?: $renterExist->cmnd_number,
-                "cmnd_front_image_url"  => $request->cmnd_front_image_url ?: $renterExist->cmnd_front_image_url,
+                "cmnd_front_image_url" => $request->cmnd_front_image_url ?: $renterExist->cmnd_front_image_url,
                 "cmnd_back_image_url" => $request->cmnd_back_image_url ?: $renterExist->cmnd_back_image_url,
                 "address" => $request->address ?: $renterExist->address,
                 "image_url" => ($request->image_url == null ? "https://data3gohomy.ikitech.vn/api/SHImages/ODLzIFikis1681367637.jpg" : $request->image_url) ?: $renterExist->image_url,
@@ -244,7 +245,7 @@ class RenterController extends Controller
         //         'msg_code' => MsgCode::CODE_CITIZEN_IDENTIFICATION_ALREADY_EXISTS[0],
         //         'msg' => MsgCode::CODE_CITIZEN_IDENTIFICATION_ALREADY_EXISTS[1],
         //     ]);
-        // }        
+        // }
         DB::beginTransaction();
         try {
             $renter_created = Renter::create([
@@ -253,7 +254,7 @@ class RenterController extends Controller
                 "phone_number" => $request->phone_number,
                 "email" => $request->email,
                 "cmnd_number" => $request->cmnd_number,
-                "cmnd_front_image_url"  => $request->cmnd_front_image_url,
+                "cmnd_front_image_url" => $request->cmnd_front_image_url,
                 "cmnd_back_image_url" => $request->cmnd_back_image_url,
                 "image_url" => $request->image_url ?? "https://data3gohomy.ikitech.vn/api/SHImages/ODLzIFikis1681367637.jpg",
                 "address" => $request->address,
@@ -279,20 +280,20 @@ class RenterController extends Controller
             'data' => $renter_created,
         ]);
     }
-    
+
     /**
-     * 
+     *
      * Danh sách user
-     * 
+     *
      * @bodyParam name string tên người dùng
      * @bodyParam number_phone số điện thoại người dùng
      * @bodyParam email string email
      * @bodyParam date_from datetime ngày bắt đầu
-     * @bodyParam date_to datetime ngày kết thúc 
+     * @bodyParam date_to datetime ngày kết thúc
      * @bodyParam descending boolean sắp xếp theo (default true)
      * @bodyParam sort_by string sắp xếp theo tên cột (account_rank, name)
      * @bodyParam limit int Số lượng bản ghi sẽ lấy
-     * 
+     *
      */
     public function getAll(Request $request)
     {
@@ -375,7 +376,7 @@ class RenterController extends Controller
         })
             ->select('renters.*')
             ->when(isset($request->user_id), function ($query) use ($request) {
-                $query->where('renters.user_id',  $request->user_id);
+                $query->where('renters.user_id', $request->user_id);
             })
             ->when($dateFrom != null || $dateTo != null, function ($query) use ($dateFrom) {
                 $query->where('created_at', '>=', $dateFrom);
@@ -404,7 +405,7 @@ class RenterController extends Controller
 
     /**
      * Thong tin 1 user
-     * 
+     *
      */
     public function getOne(Request $request)
     {
@@ -432,11 +433,11 @@ class RenterController extends Controller
     }
 
     /**
-     * 
+     *
      * Cập nhật renter
-     * 
+     *
      * @bodyParam host_rank
-     * 
+     *
      */
     public function update(Request $request)
     {
@@ -458,9 +459,9 @@ class RenterController extends Controller
                 'email' => $request->email ?? $renterExist->email,
                 'phone_number' => $request->phone_number ?? $renterExist->phone_number,
                 'address' => $request->address ?? $renterExist->address,
-                'cmnd_number'  => $request->cmnd_number  ?? $renterExist->cmnd_number,
-                'cmnd_front_image_url'  => $request->cmnd_front_image_url  ?? $renterExist->cmnd_front_image_url,
-                'cmnd_back_image_url'  => $request->cmnd_back_image_url  ?? $renterExist->cmnd_back_image_url,
+                'cmnd_number' => $request->cmnd_number ?? $renterExist->cmnd_number,
+                'cmnd_front_image_url' => $request->cmnd_front_image_url ?? $renterExist->cmnd_front_image_url,
+                'cmnd_back_image_url' => $request->cmnd_back_image_url ?? $renterExist->cmnd_back_image_url,
                 "image_url" => ($request->image_url == null ? "https://data3gohomy.ikitech.vn/api/SHImages/ODLzIFikis1681367637.jpg" : $request->image_url) ?? $renterExist->image_url,
                 "name_tower_expected" => $request->name_tower_expected ?? $renterExist->name_tower_expected,
                 "name_motel_expected" => $request->name_motel_expected ?? $renterExist->name_motel_expected,
@@ -481,10 +482,10 @@ class RenterController extends Controller
     }
 
     /**
-     * 
+     *
      * Xóa ng thuê
-     * 
-     * 
+     *
+     *
      */
     public function delete(Request $request)
     {
@@ -531,10 +532,23 @@ class RenterController extends Controller
             'msg' => MsgCode::SUCCESS[1],
         ]);
     }
+
     // KYC GET RENTER BY USER ID
     public function getRenterByUserid($userId)
     {
-        $renters = Renter::where("user_id", $userId)->get();
+        $renters = Renter::query()
+            ->where(["type" => RenterType::RENTER, "user_id" => $userId])
+            ->first();
+
+        if (!$renters) {
+            return ResponseUtils::json([
+                'code' => Response::HTTP_NOT_FOUND,
+                'success' => false,
+                'msg_code' => MsgCode::NO_RENTER_EXISTS[0],
+                'msg' => MsgCode::NO_RENTER_EXISTS[1]
+            ]);
+        }
+
         return ResponseUtils::json([
             'code' => Response::HTTP_OK,
             'success' => true,
@@ -543,10 +557,23 @@ class RenterController extends Controller
             'data' => $renters
         ]);
     }
+
     // KYC GET MASTER BY USER ID
     public function getMasterByUserid($userId)
     {
-        $masters = Renter::where(["type" => RenterType::MASTER, "user_id" => $userId])->get();
+        $masters = Renter::query()
+            ->where(["type" => RenterType::MASTER, "user_id" => $userId])
+            ->first();
+
+        if (!$masters) {
+            return ResponseUtils::json([
+                'code' => Response::HTTP_NOT_FOUND,
+                'success' => false,
+                'msg_code' => MsgCode::NO_MASTER_EXISTS[0],
+                'msg' => MsgCode::NO_MASTER_EXISTS[1]
+            ]);
+        }
+
         return ResponseUtils::json([
             'code' => Response::HTTP_OK,
             'success' => true,

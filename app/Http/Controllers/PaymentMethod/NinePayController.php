@@ -335,7 +335,7 @@ class NinePayController extends Controller
         $response_data = json_decode($response);
 
         if(isset($response_data->status) && $response_data->status == 5){
-            $response = VirtualAccount::query()
+             VirtualAccount::query()
                 ->where('user_id', $uid)
                 ->update([
                     'user_id'=> $uid,
