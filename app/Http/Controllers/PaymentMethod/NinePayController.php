@@ -269,6 +269,7 @@ class NinePayController extends Controller
         );
 
         $response = self::callAPI('POST', self::END_POINT . '/va/create', $virtual_account_param, $headers);
+
         $response_data = json_decode($response);
 
         if(isset($response_data->status) && $response_data->status == 5){
@@ -278,8 +279,8 @@ class NinePayController extends Controller
                     'request_id'=> $request_id,
                     'bank_code'=> $bank_code,
                     'request_amount'=> $request_amount,
-                    'bank_account_name'=> $response->data->bank_account_name,
-                    'qr_code_url'=> $response->data->qr_code_url,
+                    'bank_account_name'=> $response_data->data->bank_account_name,
+                    'qr_code_url'=> $response_data->data->qr_code_url,
                 ]);
         }
 
@@ -332,8 +333,6 @@ class NinePayController extends Controller
 
         $response = self::callAPI('POST', self::END_POINT . '/va/update', $virtual_account_param, $headers);
         $response_data = json_decode($response);
-
-        Log::info(json_encode($response_data));
 
         if(isset($response_data->status) && $response_data->status == 5){
             $response = VirtualAccount::query()
