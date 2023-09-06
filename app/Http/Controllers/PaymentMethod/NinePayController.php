@@ -3,21 +3,26 @@
 namespace App\Http\Controllers\PaymentMethod;
 
 use App\Helper\Helper;
+use App\Helper\ResponseUtils;
 use App\Helper\TypeFCM;
 use App\Http\Controllers\Controller;
 use App\Jobs\PushNotificationUserJob;
+use App\Models\MsgCode;
 use App\Models\Order;
 use App\Models\OrderRecord;
 use App\Models\StatusPaymentHistory;
 use App\Models\User;
 use App\Models\VirtualAccount;
+use Exception;
 use Illuminate\Http\Request;
 use App\Jobs\PushNotificationJob;
 use App\Models\UserDeviceToken;
 // use App\Traits\NinePay;
 use App\Http\Controllers\PaymentMethod\lib\HMACSignature;
 use  App\Http\Controllers\PaymentMethod\lib\MessageBuilder;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -29,6 +34,8 @@ class NinePayController extends Controller
     const MERCHANT_KEY = 'Fdakr9';
     const MERCHANT_SECRET_KEY = 'sYGDQGOYLojD5w4uTVZLgJiZ3lkeqahk5aP';
     const END_POINT = 'https://sand-payment.9pay.vn';
+    const UNAME = 'Rencity';
+    const DEFAULT_BANK_CODE = 'BIDV';
 
     public function callAPI($method, $url, $data, $headers = false)
     {
@@ -217,6 +224,7 @@ class NinePayController extends Controller
         }
         print_r($this->urlsafeB64Decode($result));
     }
+
     function urlsafeB64Decode($input)
     {
         $remainder = \strlen($input) % 4;
@@ -231,20 +239,13 @@ class NinePayController extends Controller
     // Create Virtual Account (VA)
     public function createVirtualAccount(Request $request)
     {
-        $request_id = $request->request_id;
+        $request_id = uniqid();
         $uid = $request->user->id;
-        $uname = $request->uname;
+        $uname = self::UNAME;
         $bank_code = $request->bank_code;
         $request_amount = $request->request_amount;
 
-        $available_balance = 0;
-        if($request->user->wallet){
-            $available_balance = $request->user->wallet->account_balance;
-        }
-
-        if ($available_balance < $request_amount) {
-            return response()->json(['status' => '0', 'msg' => 'Insufficient Wallet Balance.']);
-        }
+        $virtual_account = null;
 
         $time = time();
         $virtual_account_param = [
@@ -260,53 +261,67 @@ class NinePayController extends Controller
             ->withParams($virtual_account_param)
             ->build();
 
-        $hmacs = new HMACSignature();
-        $signature = $hmacs->sign($message, self::MERCHANT_SECRET_KEY);
+        DB::beginTransaction();
+        try {
+            $hmacs = new HMACSignature();
+            $signature = $hmacs->sign($message, self::MERCHANT_SECRET_KEY);
 
-        $headers = array(
-            'Date: ' . $time,
-            'Authorization: Signature Algorithm=HS256,Credential=' . self::MERCHANT_KEY . ',SignedHeaders=,Signature=' . $signature
-        );
+            $headers = array(
+                'Date: ' . $time,
+                'Authorization: Signature Algorithm=HS256,Credential=' . self::MERCHANT_KEY . ',SignedHeaders=,Signature=' . $signature
+            );
 
-        $response = self::callAPI('POST', self::END_POINT . '/va/create', $virtual_account_param, $headers);
+            $response = self::callAPI('POST', self::END_POINT . '/va/create', $virtual_account_param, $headers);
 
-        $response_data = json_decode($response);
+            $response_data = json_decode($response);
 
-        if(isset($response_data->status) && $response_data->status == 5){
-            $virtual_account = VirtualAccount::query()
-                ->create([
-                    'user_id'=> $uid,
-                    'request_id'=> $request_id,
-                    'bank_code'=> $bank_code,
-                    'request_amount'=> $request_amount,
-                    'bank_account_name'=> $response_data->data->bank_account_name,
-                    'qr_code_url'=> $response_data->data->qr_code_url,
-                ]);
+            if (isset($response_data->status) && $response_data->status == 5) {
+                $virtual_account = VirtualAccount::query()
+                    ->create([
+                        'user_id' => $uid,
+                        'request_id' => $request_id,
+                        'bank_code' => $bank_code,
+                        'request_amount' => $request_amount,
+                        'bank_account_name' => $response_data->data->bank_account_name,
+                        'qr_code_url' => $response_data->data->qr_code_url,
+                    ]);
+            }
+
+            DB::commit();
+        } catch (Exception $e) {
+            DB::rollBack();
+            throw new Exception($e->getMessage());
         }
 
-        echo 'HEADERs:';
-        print_r($headers);
-        echo '<hr>RESULT:';
-        print_r($response);
+        return ResponseUtils::json([
+            'code' => Response::HTTP_OK,
+            'success' => true,
+            'msg_code' => MsgCode::SUCCESS[0],
+            'msg' => MsgCode::SUCCESS[1],
+            'data' => $virtual_account,
+        ]);
     }
+
     //  Update Virtual Account (VA)
     public function updateVirtualAccount(Request $request)
     {
-        $request_id = $request->request_id;
+        $virtual_account = VirtualAccount::query()->where('user_id', $request->user->id)->first();;
+
+        if (!$virtual_account) {
+            return ResponseUtils::json([
+                'code' => Response::HTTP_NOT_FOUND,
+                'success' => false,
+                'msg_code' => MsgCode::NO_VIRTUAL_ACCOUNT_EXISTS[0],
+                'msg' => MsgCode::NO_VIRTUAL_ACCOUNT_EXISTS[1]
+            ]);
+        }
+
+        $request_id = $virtual_account->request_id;
         $uid = $request->user->id;
-        $uname = $request->uname;
+        $uname = self::UNAME;
         $bank_code = $request->bank_code;
         $request_amount = $request->request_amount;
         $is_active = $request->is_active;
-
-        $available_balance = 0;
-        if($request->user->wallet){
-            $available_balance = $request->user->wallet->account_balance;
-        }
-
-        if ($available_balance < $request_amount) {
-            return response()->json(['status' => '0', 'msg' => 'Insufficient Wallet Balance.']);
-        }
 
         $time = time();
         $virtual_account_param = [
@@ -323,40 +338,66 @@ class NinePayController extends Controller
             ->withParams($virtual_account_param)
             ->build();
 
-        $hmacs = new HMACSignature();
-        $signature = $hmacs->sign($message, self::MERCHANT_SECRET_KEY);
+        DB::beginTransaction();
+        try {
+            $hmacs = new HMACSignature();
+            $signature = $hmacs->sign($message, self::MERCHANT_SECRET_KEY);
 
-        $headers = array(
-            'Date: ' . $time,
-            'Authorization: Signature Algorithm=HS256,Credential=' . self::MERCHANT_KEY . ',SignedHeaders=,Signature=' . $signature
-        );
+            $headers = array(
+                'Date: ' . $time,
+                'Authorization: Signature Algorithm=HS256,Credential=' . self::MERCHANT_KEY . ',SignedHeaders=,Signature=' . $signature
+            );
 
-        $response = self::callAPI('POST', self::END_POINT . '/va/update', $virtual_account_param, $headers);
-        $response_data = json_decode($response);
+            $response = self::callAPI('POST', self::END_POINT . '/va/update', $virtual_account_param, $headers);
+            $response_data = json_decode($response);
 
-        if(isset($response_data->status) && $response_data->status == 5){
-             VirtualAccount::query()
-                ->where('user_id', $uid)
-                ->update([
-                    'user_id'=> $uid,
-                    'request_id'=> $request_id,
-                    'bank_code'=> $bank_code,
-                    'request_amount'=> $request_amount,
-                    'is_active'=> $is_active,
-                    'bank_account_name'=> $response_data->data->bank_account_name,
-                    'qr_code_url'=> $response_data->data->qr_code_url,
-                ]);
+            if (isset($response_data->status) && $response_data->status == 5) {
+                VirtualAccount::query()
+                    ->where('user_id', $uid)
+                    ->update([
+                        'user_id' => $uid,
+                        'request_id' => $request_id,
+                        'bank_code' => $bank_code,
+                        'request_amount' => $request_amount,
+                        'is_active' => $is_active,
+                        'bank_account_name' => $response_data->data->bank_account_name,
+                        'qr_code_url' => $response_data->data->qr_code_url,
+                    ]);
+
+                DB::commit();
+
+                $virtual_account = VirtualAccount::query()->where('user_id', $uid)->first();
+            }
+        } catch (Exception $e) {
+            DB::rollBack();
+            throw new Exception($e->getMessage());
         }
 
-        echo 'HEADERs:';
-        print_r($headers);
-        echo '<hr>RESULT:';
-        print_r($response);
+        return ResponseUtils::json([
+            'code' => Response::HTTP_OK,
+            'success' => true,
+            'msg_code' => MsgCode::SUCCESS[0],
+            'msg' => MsgCode::SUCCESS[1],
+            'data' => $virtual_account,
+        ]);
     }
 
     //  Query Virtual Account info
     public function infoVirtualAccount(Request $request)
     {
+        $virtual_account = VirtualAccount::query()
+            ->where('user_id', $request->user->id)
+            ->first();;
+
+        if (!$virtual_account) {
+            return ResponseUtils::json([
+                'code' => Response::HTTP_NOT_FOUND,
+                'success' => false,
+                'msg_code' => MsgCode::NO_VIRTUAL_ACCOUNT_EXISTS[0],
+                'msg' => MsgCode::NO_VIRTUAL_ACCOUNT_EXISTS[1]
+            ]);
+        }
+
         $uid = $request->user->id;
         $bank_code = $request->bank_code;
 
@@ -371,31 +412,44 @@ class NinePayController extends Controller
             ->withParams($virtual_account_param)
             ->build();
 
-        $hmacs = new HMACSignature();
-        $signature = $hmacs->sign($message, self::MERCHANT_SECRET_KEY);
+        try{
+            $hmacs = new HMACSignature();
+            $signature = $hmacs->sign($message, self::MERCHANT_SECRET_KEY);
 
-        $headers = array(
-            'Date: ' . $time,
-            'Authorization: Signature Algorithm=HS256,Credential=' . self::MERCHANT_KEY . ',SignedHeaders=,Signature=' . $signature
-        );
+            $headers = array(
+                'Date: ' . $time,
+                'Authorization: Signature Algorithm=HS256,Credential=' . self::MERCHANT_KEY . ',SignedHeaders=,Signature=' . $signature
+            );
 
-        $response = self::callAPI('POST', self::END_POINT . '/va/info', $virtual_account_param, $headers);
-        $response_data = json_decode($response);
+            $response = self::callAPI('POST', self::END_POINT . '/va/info', $virtual_account_param, $headers);
+            $response_data = json_decode($response);
 
-        if(isset($response_data->status) && $response_data->status == 5){
-            VirtualAccount::query()
-                ->where('user_id', $uid)
-                ->update([
-                    'user_id'=> $uid,
-                    'bank_code'=> $bank_code,
-                ]);
+            if (isset($response_data->status) && $response_data->status == 5) {
+                VirtualAccount::query()
+                    ->where('user_id', $uid)
+                    ->update([
+                        'user_id' => $uid,
+                        'bank_code' => $bank_code,
+                    ]);
+
+                DB::commit();
+
+                $virtual_account = VirtualAccount::query()
+                    ->where('user_id', $uid)
+                    ->first();
+            }
+        } catch (Exception $e) {
+            DB::rollBack();
+            throw new Exception($e->getMessage());
         }
 
-        echo 'HEADERs:';
-        print_r($headers);
-        echo '<hr>RESULT:';
-        print_r($response);
-
+        return ResponseUtils::json([
+            'code' => Response::HTTP_OK,
+            'success' => true,
+            'msg_code' => MsgCode::SUCCESS[0],
+            'msg' => MsgCode::SUCCESS[1],
+            'data' => $virtual_account,
+        ]);
     }
 
 

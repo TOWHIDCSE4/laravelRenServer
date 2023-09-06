@@ -116,6 +116,8 @@ class MsgCode extends BaseModel
     const LIMIT_A_POST_WITH_RENTER = ["LIMIT_A_POST_WITH_RENTER", "Giới hạn 1 bài đăng với người thuê không phải chủ nhà"];
     const NO_RENTER_EXISTS = ["NO_RENTER_EXISTS", "Người thuê không tồn tại"];
     const NO_MASTER_EXISTS = ["NO_MASTER_EXISTS", "Không có chủ nhân nào tồn tại"];
+    const NO_VIRTUAL_ACCOUNT_EXISTS = ["NO_VIRTUAL_ACCOUNT_EXISTS", "Không có tài khoản ảo nào tồn tại"];
+    const ALREADY_VIRTUAL_ACCOUNT_EXISTS = ["ALREADY_VIRTUAL_ACCOUNT_EXISTS", "Đã tồn tại tài khoản ảo"];
     const NO_SERVICE_EXISTS = ["NO_SERVICE_EXISTS", "Dịch vụ không tồn tại"];
     const NO_SERVICE_BY_ROOM_CLOSEST_EXISTS = ["NO_SERVICE_BY_ROOM_CLOSEST_EXISTS", "Dịch vụ phòng gần nhất không tồn tại"];
     const NO_DECENTRALIZATION_EXISTS = ["NO_DECENTRALIZATION_EXISTS", "Phân quyền không tồn tại"];
