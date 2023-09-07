@@ -662,19 +662,19 @@ Route::middleware(["mid_res"])
         /**
          * Wallet Transaction
          */
-        Route::post('/deposits', 'App\Http\Controllers\Api\Admin\WalletTransactionController@createWalletDeposit')->middleware('user_auth', 'permission_admin');
-        Route::get('/deposits', 'App\Http\Controllers\Api\Admin\WalletTransactionController@getAllWalletDeposit')->middleware('user_auth', 'permission_admin');
-        Route::put('/deposit/edit/{wallet_transaction_id}', 'App\Http\Controllers\Api\Admin\WalletTransactionController@editWalletDeposit')->middleware('user_auth', 'permission_admin');
+        Route::post('/deposits', 'App\Http\Controllers\Api\Admin\WalletTransactionController@createWalletDeposit')->middleware('user_auth');
+        Route::get('/deposits', 'App\Http\Controllers\Api\Admin\WalletTransactionController@getAllWalletDeposit')->middleware('user_auth');
+        Route::put('/deposit/edit/{wallet_transaction_id}', 'App\Http\Controllers\Api\Admin\WalletTransactionController@editWalletDeposit')->middleware('user_auth');
 
         //Virtual Account
         Route::post('/virtual-account/create', 'App\Http\Controllers\PaymentMethod\NinePayController@createVirtualAccount')->middleware('user_auth');
         Route::post('/virtual-account/update', 'App\Http\Controllers\PaymentMethod\NinePayController@updateVirtualAccount')->middleware('user_auth');
         Route::post('/virtual-account/info', 'App\Http\Controllers\PaymentMethod\NinePayController@infoVirtualAccount')->middleware('user_auth');
 
-        Route::post('/payments-create','App\Http\Controllers\PaymentMethod\NinePayController@paymentCreate')->middleware('user_auth', 'permission_admin');
-        Route::get('/inquire','App\Http\Controllers\PaymentMethod\NinePayController@inquire')->middleware('user_auth', 'permission_admin');
-        Route::post('/refunds-create' ,'App\Http\Controllers\PaymentMethod\NinePayController@refundCreate')->middleware('user_auth', 'permission_admin');
+        Route::post('/payments-create','App\Http\Controllers\PaymentMethod\NinePayController@paymentCreate')->middleware('user_auth');
+        Route::get('/inquire','App\Http\Controllers\PaymentMethod\NinePayController@inquire')->middleware('user_auth');
+        Route::post('/refunds-create' ,'App\Http\Controllers\PaymentMethod\NinePayController@refundCreate')->middleware('user_auth');
 
         // Route::get('get/invoice/inquire','App\Http\Controllers\PaymentMethod\NinePayController@invoiceInquire')->middleware('user_auth', 'permission_admin');
-        Route::get('/result','App\Http\Controllers\PaymentMethod\NinePayController@result')->middleware('user_auth', 'permission_admin');
+        Route::get('/result','App\Http\Controllers\PaymentMethod\NinePayController@result')->middleware('user_auth');
     });

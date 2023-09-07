@@ -274,17 +274,12 @@ class WalletTransactionController extends Controller
 
 
                 if(isset($response_data->status) && $response_data->status == 5){
-                    VirtualAccount::query()
-                        ->where('user_id', $user_id)
-                        ->update([
-                            'user_id'=> $user_id,
-                            'bank_account_no'=> $response_data->data->bank_account_no,
-                            'request_amount'=> $total_amount,
-                        ]);
+                    $virtual_account->bank_account_no = $response_data->data->bank_account_no;
+                    $virtual_account->request_amount = $total_amount;
+                    $virtual_account->save();
                 }
             }
 
-            DB::commit();
 
             if(!$virtual_account){
                 return ResponseUtils::json([
@@ -307,6 +302,7 @@ class WalletTransactionController extends Controller
                 "type" => WalletTransaction::DEPOSIT,
             ]);
 
+            DB::commit();
         } catch (Exception $e) {
             DB::rollBack();
             throw new Exception($e->getMessage());

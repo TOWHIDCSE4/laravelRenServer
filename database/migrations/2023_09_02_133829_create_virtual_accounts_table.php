@@ -23,7 +23,7 @@ class CreateVirtualAccountsTable extends Migration
             $table->string('failure_reason')->nullable();
             $table->string('message')->nullable();
             $table->string('bank_account_name')->nullable();
-            $table->integer('bank_account_no')->nullable();
+            $table->string('bank_account_no')->nullable();
             $table->string('qr_code_url')->nullable();
             $table->integer('payment_no')->nullable();
             $table->integer('is_active')->default(0);
