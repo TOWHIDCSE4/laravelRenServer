@@ -633,12 +633,6 @@ Route::middleware(["mid_res"])
 
             Route::post('/config_admins', 'App\Http\Controllers\Api\Admin\ConfigAdminController@setCurrentVersionAdmin');
 
-             /**
-             * Wallet Transaction
-             */
-            Route::post('/deposits', 'App\Http\Controllers\Api\Admin\WalletTransactionController@createWalletDeposit')->middleware('user_auth', 'permission_admin');
-            Route::get('/deposits', 'App\Http\Controllers\Api\Admin\WalletTransactionController@getAllWalletDeposit')->middleware('user_auth', 'permission_admin');
-            Route::put('/deposit/edit/{wallet_transaction_id}', 'App\Http\Controllers\Api\Admin\WalletTransactionController@editWalletDeposit')->middleware('user_auth', 'permission_admin');
 
             // Wallet withdrows
             Route::post('/withdraws', 'App\Http\Controllers\Api\Admin\WalletTransactionController@createWalletWithdraws')->middleware('user_auth', 'permission_admin');
@@ -664,6 +658,13 @@ Route::middleware(["mid_res"])
 
 
         });
+
+        /**
+         * Wallet Transaction
+         */
+        Route::post('/deposits', 'App\Http\Controllers\Api\Admin\WalletTransactionController@createWalletDeposit')->middleware('user_auth', 'permission_admin');
+        Route::get('/deposits', 'App\Http\Controllers\Api\Admin\WalletTransactionController@getAllWalletDeposit')->middleware('user_auth', 'permission_admin');
+        Route::put('/deposit/edit/{wallet_transaction_id}', 'App\Http\Controllers\Api\Admin\WalletTransactionController@editWalletDeposit')->middleware('user_auth', 'permission_admin');
 
         //Virtual Account
         Route::post('/virtual-account/create', 'App\Http\Controllers\PaymentMethod\NinePayController@createVirtualAccount')->middleware('user_auth');

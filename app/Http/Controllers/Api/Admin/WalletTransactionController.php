@@ -230,6 +230,7 @@ class WalletTransactionController extends Controller
                                 [
                                     'user_id' => $user_id,
                                     'bank_account_name' => $response_data->data->bank_account_name,
+                                    'bank_account_no' => $response_data->data->bank_account_no,
                                     'qr_code_url' => $response_data->data->qr_code_url,
                                 ]
                             ));
@@ -271,11 +272,13 @@ class WalletTransactionController extends Controller
                 $response = $ninePayController->callAPI('POST', NinePayController::END_POINT . '/va/update', $virtual_account_param, $headers);
                 $response_data = json_decode($response);
 
+
                 if(isset($response_data->status) && $response_data->status == 5){
                     VirtualAccount::query()
                         ->where('user_id', $user_id)
-                        ->updateOrCreate([
+                        ->update([
                             'user_id'=> $user_id,
+                            'bank_account_no'=> $response_data->data->bank_account_no,
                             'request_amount'=> $total_amount,
                         ]);
                 }
@@ -294,9 +297,9 @@ class WalletTransactionController extends Controller
 
             $wallet_transaction_created = WalletTransaction::create([
                 "user_id" => $user_id,
-                "account_number" => $request->account_number,
-                "bank_account_holder_name" => $request->bank_account_holder_name,
-                "bank_name" => $request->bank_name,
+                "account_number" => $virtual_account->bank_account_no,
+                "bank_account_holder_name" => $virtual_account->bank_account_name,
+                "bank_name" => $virtual_account->bank_code,
                 "deposit_money" => $request->deposit_money,
                 "deposit_trading_code" => Helper::generateTransactionID(),
                 "deposit_date_time" => Helper::getTimeNowString(),

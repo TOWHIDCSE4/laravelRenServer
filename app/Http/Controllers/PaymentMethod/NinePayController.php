@@ -136,10 +136,11 @@ class NinePayController extends Controller
 
     public function paymentCreate(Request $request)
     {
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $http = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https://' : 'http://';
             $backUrl = "$http$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-            $returnUrl = str_replace('index.php', '', $backUrl);
+            $returnUrl = str_replace('payments-create', '', $backUrl);
             $time = time();
 
             $data = array(
@@ -150,7 +151,7 @@ class NinePayController extends Controller
                 'description' => $request->description,
 
                 'back_url' => $backUrl,
-                'return_url' => "{$returnUrl}result.php",
+                'return_url' => "{$returnUrl}result",
             );
 
             $message = MessageBuilder::instance()
@@ -222,6 +223,8 @@ class NinePayController extends Controller
         } else {
             echo 'Dữ liệu không hợp lệ';
         }
+
+        Log::info(json_encode($this->urlsafeB64Decode($result)));
         print_r($this->urlsafeB64Decode($result));
     }
 
@@ -275,6 +278,15 @@ class NinePayController extends Controller
 
             $response_data = json_decode($response);
 
+            if(isset($response_data->error_code) && $response_data->error_code == '001'){
+                return ResponseUtils::json([
+                    'code' => Response::HTTP_CONFLICT,
+                    'success' => false,
+                    'msg_code' => MsgCode::ALREADY_VIRTUAL_ACCOUNT_EXISTS[0],
+                    'msg' => MsgCode::ALREADY_VIRTUAL_ACCOUNT_EXISTS[1]
+                ]);
+            }
+
             if (isset($response_data->status) && $response_data->status == 5) {
                 $virtual_account = VirtualAccount::query()
                     ->create([
@@ -282,6 +294,7 @@ class NinePayController extends Controller
                         'request_id' => $request_id,
                         'bank_code' => $bank_code,
                         'request_amount' => $request_amount,
+                        'bank_account_no' => $response_data->data->bank_account_no,
                         'bank_account_name' => $response_data->data->bank_account_name,
                         'qr_code_url' => $response_data->data->qr_code_url,
                     ]);
@@ -361,6 +374,7 @@ class NinePayController extends Controller
                         'request_amount' => $request_amount,
                         'is_active' => $is_active,
                         'bank_account_name' => $response_data->data->bank_account_name,
+                        'bank_account_no' => $response_data->data->bank_account_no,
                         'qr_code_url' => $response_data->data->qr_code_url,
                     ]);
 
