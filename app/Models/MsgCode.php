@@ -118,6 +118,12 @@ class MsgCode extends BaseModel
     const NO_MASTER_EXISTS = ["NO_MASTER_EXISTS", "Không có chủ nhân nào tồn tại"];
     const NO_VIRTUAL_ACCOUNT_EXISTS = ["NO_VIRTUAL_ACCOUNT_EXISTS", "Không có tài khoản ảo nào tồn tại"];
     const ALREADY_VIRTUAL_ACCOUNT_EXISTS = ["ALREADY_VIRTUAL_ACCOUNT_EXISTS", "Đã tồn tại tài khoản ảo"];
+    const INVALID_CARD_DETAILS = ["INVALID_CARD_DETAILS", "Dữ liệu không hợp lệ"];
+    const INVALID_9PAY_CREDENTIALS = ["INVALID_9PAY_CREDENTIALS", "thông tin xác thực 9pay không hợp lệ"];
+    const TRANSACTION_EXPIRE_9PAY = ["TRANSACTION EXPIRE", "Giao dịch hết hạn"];
+    const TRANSACTION_FAILED_9PAY = ["TRANSACTION FAILED", "Giao dịch thất bại"];
+    const TRANSACTION_CANCELED_9PAY = ["TRANSACTION CANCELED", "Giao dịch đã bị hủy"];
+    const TRANSACTION_PROCESSING_9PAY = ["TRANSACTION PROCESSING", "'Giao dịch đang xử lý"];
     const NO_SERVICE_EXISTS = ["NO_SERVICE_EXISTS", "Dịch vụ không tồn tại"];
     const NO_SERVICE_BY_ROOM_CLOSEST_EXISTS = ["NO_SERVICE_BY_ROOM_CLOSEST_EXISTS", "Dịch vụ phòng gần nhất không tồn tại"];
     const NO_DECENTRALIZATION_EXISTS = ["NO_DECENTRALIZATION_EXISTS", "Phân quyền không tồn tại"];

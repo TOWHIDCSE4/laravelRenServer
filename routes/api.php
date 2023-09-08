@@ -676,5 +676,6 @@ Route::middleware(["mid_res"])
         Route::post('/refunds-create' ,'App\Http\Controllers\PaymentMethod\NinePayController@refundCreate')->middleware('user_auth');
 
         // Route::get('get/invoice/inquire','App\Http\Controllers\PaymentMethod\NinePayController@invoiceInquire')->middleware('user_auth', 'permission_admin');
-        Route::get('/result','App\Http\Controllers\PaymentMethod\NinePayController@result')->middleware('user_auth');
+        Route::get('/result','App\Http\Controllers\PaymentMethod\NinePayController@result');
+        Route::post('/ipn-url ','App\Http\Controllers\PaymentMethod\NinePayController@ipnUrlWebhook');
     });

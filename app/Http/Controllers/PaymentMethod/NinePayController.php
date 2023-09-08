@@ -13,6 +13,7 @@ use App\Models\OrderRecord;
 use App\Models\StatusPaymentHistory;
 use App\Models\User;
 use App\Models\VirtualAccount;
+use App\Models\VirtualAccountTransaction;
 use Exception;
 use Illuminate\Http\Request;
 use App\Jobs\PushNotificationJob;
@@ -33,6 +34,7 @@ class NinePayController extends Controller
 
     const MERCHANT_KEY = 'Fdakr9';
     const MERCHANT_SECRET_KEY = 'sYGDQGOYLojD5w4uTVZLgJiZ3lkeqahk5aP';
+    const CHECKSUM_SECRET_KEY = 'SLtZLhRIsOnUDdtigF9b9QTPIGR444M8';
     const END_POINT = 'https://sand-payment.9pay.vn';
     const UNAME = 'Rencity';
     const DEFAULT_BANK_CODE = 'BIDV';
@@ -168,19 +170,17 @@ class NinePayController extends Controller
                 'signature' => $signature,
             ];
             $redirectUrl = self::END_POINT . '/portal?' . http_build_query($httpData);
-            echo '<pre>';
-            print_r($data);
-            echo '<br/>';
-            echo '<hr/>';
-            print_r($message);
-            echo '<br/>';
-            echo '<hr/>';
-            var_dump($httpData);
-            echo '<br/>';
-            echo '<hr/>';
-            print_r($redirectUrl);
-            exit();
-            //return header('Location: ' . $redirectUrl);
+
+
+            return ResponseUtils::json([
+                'code' => Response::HTTP_OK,
+                'success' => true,
+                'msg_code' => MsgCode::SUCCESS[0],
+                'msg' => MsgCode::SUCCESS[1],
+                'data' => [
+                    'redirect_url' => $redirectUrl
+                ],
+            ]);
         }
     }
 
@@ -212,21 +212,114 @@ class NinePayController extends Controller
 
     public function result(Request $request)
     {
-        $secretKeyChecksum = 'sYGDQGOYLojD5w4uTVZLgJiZ3lkeqahk5aP';
-        $result = 'eyJhbW91bnQiOjExMDAwMCwiYW1vdW50X2ZvcmVpZ24iOm51bGwsImFtb3VudF9vcmlnaW5hbCI6bnVsbCwiYW1vdW50X3JlcXVlc3QiOjExMDAwMCwiYmFuayI6bnVsbCwiY2FyZF9icmFuZCI6IlZJU0EiLCJjYXJkX2luZm8iOnsidG9rZW4iOiIzMDQ2NWEwMDRiZjU0NWQxNjkyMWEyY2ZhMjAwNmVlYyIsImNhcmRfbmFtZSI6Ik5HVVlFTiBWQU4gQSIsImhhc2hfY2FyZCI6ImI1NDdjNjdhZmJkODM0N2Y2ZWY0YmFhMGViOGFkZDkyIiwiY2FyZF9icmFuZCI6IlZJU0EiLCJjYXJkX251bWJlciI6IjQwMDU1NXh4eHh4eDAwMDkifSwiY3JlYXRlZF9hdCI6IjIwMjItMDYtMDNUMDI6MDY6MjguMDAwMDAwWiIsImN1cnJlbmN5IjoiVk5EIiwiZGVzY3JpcHRpb24iOiJUaGFuaCB0b8OhbiDEkcahbiBow6BuZyBRUDE2NTQyNDcxNzE1MjMwMzU4IiwiZXhjX3JhdGUiOm51bGwsImZhaWx1cmVfcmVhc29uIjpudWxsLCJmb3JlaWduX2N1cnJlbmN5IjpudWxsLCJpbnZvaWNlX25vIjoiUVAxNjU0MjQ3MTcxNTIzMDM1OCIsImxhbmciOm51bGwsIm1ldGhvZCI6IkNSRURJVF9DQVJEIiwicGF5bWVudF9ubyI6Mjk5Nzc4NTIyODk1LCJzdGF0dXMiOjUsInRlbm9yIjpudWxsfQ';
-        $checksum = 'SLtZLhRIsOnUDdtigF9b9QTPIGR444M8';
-
+        $secretKeyChecksum = self::CHECKSUM_SECRET_KEY;
+        $result = $request->result;
+        $checksum =  $request->checksum;
 
         $hashChecksum = strtoupper(hash('sha256', $result . $secretKeyChecksum));
+
         if ($hashChecksum === $checksum) {
-            echo 'Dữ liệu đúng';
-        } else {
-            echo 'Dữ liệu không hợp lệ';
+            $response_data = json_decode($this->urlsafeB64Decode($result));
+            $status = $response_data->status;
+
+            if ($status == 15) {
+                return ResponseUtils::json([
+                    'code' => Response::HTTP_NOT_EXTENDED,
+                    'success' => false,
+                    'msg_code' => MsgCode::TRANSACTION_EXPIRE_9PAY[0],
+                    'msg' => MsgCode::TRANSACTION_EXPIRE_9PAY[1]
+                ]);
+            }
+
+            $virtual_account_transaction = VirtualAccountTransaction::query()
+                ->create([
+                    'payment_no'=> $response_data->payment_no,
+                    'invoice_no'=> $response_data->invoice_no,
+                    'currency'=> $response_data->currency,
+                    'amount'=> $response_data->amount,
+                    'description'=> $response_data->description,
+                    'method'=> $response_data->method,
+                    'card_brand'=> $response_data->card_brand,
+                    'payment_at' =>  $response_data->created_at,
+                    'card_info' => $response_data->card_info,
+                ]);
+
+            if ($status == 8) {
+                $virtual_account_transaction->payment_status = VirtualAccount::PAYMENT_CANCELED;
+                $virtual_account_transaction->save();
+
+                return ResponseUtils::json([
+                    'code' => Response::HTTP_BAD_REQUEST,
+                    'success' => false,
+                    'msg_code' => MsgCode::TRANSACTION_CANCELED_9PAY[0],
+                    'msg' => MsgCode::TRANSACTION_CANCELED_9PAY[1]
+                ]);
+            }
+
+            if ($status == 6) {
+                $virtual_account_transaction->payment_status = VirtualAccount::PAYMENT_FAILED;
+                $virtual_account_transaction->save();
+
+                return ResponseUtils::json([
+                    'code' => Response::HTTP_BAD_REQUEST,
+                    'success' => false,
+                    'msg_code' => MsgCode::TRANSACTION_FAILED_9PAY[0],
+                    'msg' => MsgCode::TRANSACTION_FAILED_9PAY[1]
+                ]);
+            }
+
+            if ($status == 4 || $status == 2) {
+                $virtual_account_transaction->payment_status = VirtualAccount::PAYMENT_PROCESSING;
+                $virtual_account_transaction->save();
+
+                return ResponseUtils::json([
+                    'code' => Response::HTTP_OK,
+                    'success' => true,
+                    'msg_code' => MsgCode::TRANSACTION_PROCESSING_9PAY[0],
+                    'msg' => MsgCode::TRANSACTION_PROCESSING_9PAY[1],
+                    'data' => $virtual_account_transaction,
+                ]);
+            }
+
+            return ResponseUtils::json([
+                'code' => Response::HTTP_OK,
+                'success' => true,
+                'msg_code' => MsgCode::SUCCESS[0],
+                'msg' => MsgCode::SUCCESS[1],
+                'data' => $virtual_account_transaction,
+            ]);
         }
 
-        Log::info(json_encode($this->urlsafeB64Decode($result)));
-        print_r($this->urlsafeB64Decode($result));
+        return ResponseUtils::json([
+            'code' => Response::HTTP_BAD_REQUEST,
+            'success' => false,
+            'msg_code' => MsgCode::INVALID_9PAY_CREDENTIALS[0],
+            'msg' => MsgCode::INVALID_9PAY_CREDENTIALS[1]
+        ]);
     }
+
+    public function ipnUrlWebhook(Request $request)
+    {
+        $secretKeyChecksum = self::CHECKSUM_SECRET_KEY;
+        $result = $request->result;
+        $checksum =  $request->checksum;
+
+        $hashChecksum = strtoupper(hash('sha256', $result . $secretKeyChecksum));
+
+        if ($hashChecksum === $checksum) {
+            $response_data = json_decode($this->urlsafeB64Decode($result));
+
+            VirtualAccountTransaction::query()
+                ->where('invoice_no', $response_data->invoice_no)
+                ->update([
+                    'payment_status' => VirtualAccount::PAYMENT_SUCCESSFUL
+                ]);
+        }
+
+        Log::info("Post Callback");
+        Log::info(json_encode(json_decode($this->urlsafeB64Decode($result))));
+    }
+
 
     function urlsafeB64Decode($input)
     {
