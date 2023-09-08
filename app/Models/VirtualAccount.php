@@ -15,4 +15,6 @@ class VirtualAccount extends Model
     const PAYMENT_CANCELED = 'canceled';
     const PAYMENT_SUCCESSFUL = 'paid';
     const PAYMENT_FAILED = 'failed';
+
+    const PAYMENT_SUCCESS = 'PAYMENT_SUCCESS';
 }

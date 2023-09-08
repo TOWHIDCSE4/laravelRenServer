@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\PaymentMethod;
 
 use App\Helper\Helper;
+use App\Helper\NotiUserDefineCode;
 use App\Helper\ResponseUtils;
 use App\Helper\TypeFCM;
 use App\Http\Controllers\Controller;
+use App\Jobs\NotificationUserJob;
 use App\Jobs\PushNotificationUserJob;
 use App\Models\MsgCode;
 use App\Models\Order;
@@ -151,9 +153,8 @@ class NinePayController extends Controller
                 'invoice_no' => $request->invoice_no,
                 'amount' => $request->amount,
                 'description' => $request->description,
-
                 'back_url' => $backUrl,
-                'return_url' => "{$returnUrl}result",
+                'return_url' => "{$returnUrl}result?user_id=".$request->user->id,
             );
 
             $message = MessageBuilder::instance()
@@ -222,6 +223,8 @@ class NinePayController extends Controller
             $response_data = json_decode($this->urlsafeB64Decode($result));
             $status = $response_data->status;
 
+            Log::info( json_encode($response_data));
+
             if ($status == 15) {
                 return ResponseUtils::json([
                     'code' => Response::HTTP_NOT_EXTENDED,
@@ -231,8 +234,9 @@ class NinePayController extends Controller
                 ]);
             }
 
-            $virtual_account_transaction = VirtualAccountTransaction::query()
+            $va_transaction = VirtualAccountTransaction::query()
                 ->create([
+                    'user_id'=> $request->user_id,
                     'payment_no'=> $response_data->payment_no,
                     'invoice_no'=> $response_data->invoice_no,
                     'currency'=> $response_data->currency,
@@ -245,8 +249,8 @@ class NinePayController extends Controller
                 ]);
 
             if ($status == 8) {
-                $virtual_account_transaction->payment_status = VirtualAccount::PAYMENT_CANCELED;
-                $virtual_account_transaction->save();
+                $va_transaction->payment_status = VirtualAccount::PAYMENT_CANCELED;
+                $va_transaction->save();
 
                 return ResponseUtils::json([
                     'code' => Response::HTTP_BAD_REQUEST,
@@ -257,8 +261,8 @@ class NinePayController extends Controller
             }
 
             if ($status == 6) {
-                $virtual_account_transaction->payment_status = VirtualAccount::PAYMENT_FAILED;
-                $virtual_account_transaction->save();
+                $va_transaction->payment_status = VirtualAccount::PAYMENT_FAILED;
+                $va_transaction->save();
 
                 return ResponseUtils::json([
                     'code' => Response::HTTP_BAD_REQUEST,
@@ -269,15 +273,15 @@ class NinePayController extends Controller
             }
 
             if ($status == 4 || $status == 2) {
-                $virtual_account_transaction->payment_status = VirtualAccount::PAYMENT_PROCESSING;
-                $virtual_account_transaction->save();
+                $va_transaction->payment_status = VirtualAccount::PAYMENT_PROCESSING;
+                $va_transaction->save();
 
                 return ResponseUtils::json([
                     'code' => Response::HTTP_OK,
                     'success' => true,
                     'msg_code' => MsgCode::TRANSACTION_PROCESSING_9PAY[0],
                     'msg' => MsgCode::TRANSACTION_PROCESSING_9PAY[1],
-                    'data' => $virtual_account_transaction,
+                    'data' => $va_transaction,
                 ]);
             }
 
@@ -286,7 +290,7 @@ class NinePayController extends Controller
                 'success' => true,
                 'msg_code' => MsgCode::SUCCESS[0],
                 'msg' => MsgCode::SUCCESS[1],
-                'data' => $virtual_account_transaction,
+                'data' => $va_transaction,
             ]);
         }
 
@@ -309,11 +313,21 @@ class NinePayController extends Controller
         if ($hashChecksum === $checksum) {
             $response_data = json_decode($this->urlsafeB64Decode($result));
 
-            VirtualAccountTransaction::query()
+            $va_transaction =  VirtualAccountTransaction::query()
                 ->where('invoice_no', $response_data->invoice_no)
-                ->update([
-                    'payment_status' => VirtualAccount::PAYMENT_SUCCESSFUL
-                ]);
+                ->first();
+
+            $va_transaction->payment_status = VirtualAccount::PAYMENT_SUCCESSFUL;
+            $va_transaction->save();
+
+            NotificationUserJob::dispatch(
+                $va_transaction->user_id,
+                "Thanh toán thành công",
+                'Thanh toán thành công',
+                VirtualAccount::PAYMENT_SUCCESS,
+                NotiUserDefineCode::USER_NORMAL,
+                $va_transaction->invoice_no
+            );
         }
 
         Log::info("Post Callback");
