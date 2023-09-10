@@ -423,6 +423,9 @@ Route::middleware(["mid_res"])
         //admin
         Route::prefix('admin')->group(function () {
 
+            Route::get('/dashboard', 'App\Http\Controllers\Api\Admin\DashboardController@index')->middleware('admin_auth', 'permission_admin');
+
+
             //Phòng trọ
             //Danh sách phòng trọ is add
             Route::get('/motels', 'App\Http\Controllers\Api\Admin\MotelController@getAll')->middleware('admin_auth', 'permission_admin');
