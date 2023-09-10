@@ -12,6 +12,7 @@ use App\Http\Controllers\PaymentMethod\lib\HMACSignature;
 use App\Http\Controllers\PaymentMethod\lib\MessageBuilder;
 use App\Http\Controllers\PaymentMethod\NinePayController;
 use App\Models\MsgCode;
+use App\Models\User;
 use App\Models\VirtualAccount;
 use App\Models\WalletTransaction;
 use Exception;
@@ -275,7 +276,6 @@ class WalletTransactionController extends Controller
 
                 if(isset($response_data->status) && $response_data->status == 5){
                     $virtual_account->bank_account_no = $response_data->data->bank_account_no;
-                    $virtual_account->request_amount = $total_amount;
                     $virtual_account->save();
                 }
             }
@@ -301,6 +301,12 @@ class WalletTransactionController extends Controller
                 "deposit_content" => $request->deposit_content ?? null,
                 "type" => WalletTransaction::DEPOSIT,
             ]);
+
+            User::query()
+                ->where('id', $request->user->id)
+                ->update([
+                    'golden_coin'=> $request->user->golden_coin + $deposit_money,
+                ]);
 
             DB::commit();
         } catch (Exception $e) {

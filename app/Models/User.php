@@ -55,7 +55,9 @@ class User extends Authenticatable
         'cmnd_back_image_url',
         'bank_account_number',
         'bank_account_name',
-        'bank_name'
+        'bank_name',
+        'golden_coin',
+        'silver_coin',
 
     ];
 
