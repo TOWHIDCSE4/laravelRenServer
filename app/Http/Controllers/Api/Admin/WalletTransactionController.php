@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\PaymentMethod\lib\HMACSignature;
 use App\Http\Controllers\PaymentMethod\lib\MessageBuilder;
 use App\Http\Controllers\PaymentMethod\NinePayController;
+use App\Http\Resources\Api\WalletTransaction\WalletTransactionCollection;
 use App\Models\MsgCode;
 use App\Models\User;
 use App\Models\VirtualAccount;
@@ -27,21 +28,31 @@ class WalletTransactionController extends Controller
     //get All Wallet Deposit
     public function getAllWalletDeposit()
     {
-        $deposits = WalletTransaction::select(
-            'user_id',
-            'deposit_money',
-            'account_number',
-            'bank_account_holder_name',
-            'bank_name',
-            'deposit_trading_code',
-            'deposit_date_time',
-            'deposit_content')->get();
+        $limit = request('limit') ?: 20;
+
+        $deposits = WalletTransaction::query()
+            ->select([
+                'user_id',
+                'deposit_money',
+                'account_number',
+                'bank_account_holder_name',
+                'bank_name',
+                'deposit_trading_code',
+                'deposit_date_time',
+                'deposit_content',
+                'type',
+                'status',
+            ])
+            ->where('type', WalletTransaction::DEPOSIT)
+            ->paginate($limit);
+
+
         return response()->json([
             'code' => 200,
             'success' => true,
             'msg_code' => MsgCode::SUCCESS[0],
             'msg' => MsgCode::SUCCESS[1],
-            'data' => $deposits,
+            'data' => new WalletTransactionCollection($deposits),
         ], 200);
     }
 
@@ -148,22 +159,31 @@ class WalletTransactionController extends Controller
     //get All Wallet Withdraws
     public function getAllWalletWithdraws()
     {
-        $deposits = WalletTransaction::select(
-            'user_id',
-            'withdraw_money',
-            'account_number',
-            'bank_account_holder_name',
-            'bank_name',
+        $limit = request('limit') ?: 20;
 
-            'withdraw_trading_code',
-            'withdraw_date_time',
-            'withdraw_content')->get();
+        $wallet_transactions = WalletTransaction::query()
+            ->where('type', WalletTransaction::WITHDRAW)
+            ->select([
+                'user_id',
+                'withdraw_money',
+                'account_number',
+                'bank_account_holder_name',
+                'bank_name',
+                'withdraw_trading_code',
+                'withdraw_date_time',
+                'withdraw_content',
+                'type',
+                'status',
+            ])
+            ->paginate($limit);
+
+
         return response()->json([
             'code' => 200,
             'success' => true,
             'msg_code' => MsgCode::SUCCESS[0],
             'msg' => MsgCode::SUCCESS[1],
-            'data' => $deposits,
+            'data' => new WalletTransactionCollection($wallet_transactions),
         ], 200);
     }
 

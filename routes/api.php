@@ -681,4 +681,8 @@ Route::middleware(["mid_res"])
         // Route::get('get/invoice/inquire','App\Http\Controllers\PaymentMethod\NinePayController@invoiceInquire')->middleware('user_auth', 'permission_admin');
         Route::get('/result','App\Http\Controllers\PaymentMethod\NinePayController@result');
         Route::post('/ipn-url ','App\Http\Controllers\PaymentMethod\NinePayController@ipnUrlWebhook');
+
+        Route::post('/addBank', 'App\Http\Controllers\BankController@addBank')->middleware('user_auth');
+        Route::post('/edit_bank_info/{bankId}', 'App\Http\Controllers\BankController@update')->middleware('user_auth');
+        Route::get('/getUserBankListbyUserId/{user_id}', 'App\Http\Controllers\BankController@getUserBankListbyUserId')->middleware('user_auth');
     });
