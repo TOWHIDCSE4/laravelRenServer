@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Api\Admin;
 
 use App\Helper\ResponseUtils;
+use App\Helper\StatusContractDefineCode;
+use App\Helper\StatusWithdrawalDefineCode;
 use App\Http\Controllers\Controller;
 use App\Models\MsgCode;
+use App\Models\User;
 use App\Models\WalletTransaction;
 use Exception;
 use Illuminate\Http\Request;
@@ -39,9 +42,28 @@ class WallentTransactionAdminReviewController extends Controller
         DB::beginTransaction();
 
         try {
-            $wallet_transaction_data = $wallet_transaction->update([
-                "status" => WalletTransaction::COMPLETED,
-            ]);
+            if($request->status == 1){
+                $user = DB::table('users')
+                    ->where('id', $request->user->id)
+                    ->first();
+
+                $wallet_transaction_data = $wallet_transaction->update([
+                    "status" => StatusWithdrawalDefineCode::CANCEL,
+                ]);
+
+                $remaining_golden_coin = $user->golden_coin + $wallet_transaction_data->withdraw_money;
+
+                User::query()
+                    ->where('id', $request->user->id)
+                    ->update([
+                        'golden_coin'=> $remaining_golden_coin,
+                    ]);
+            }else{
+                $wallet_transaction_data = $wallet_transaction->update([
+                    "status" => StatusWithdrawalDefineCode::APPROVED,
+                ]);
+            }
+
             DB::commit();
 
             return ResponseUtils::json([

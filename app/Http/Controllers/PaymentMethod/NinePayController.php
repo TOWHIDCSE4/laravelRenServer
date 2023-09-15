@@ -313,21 +313,30 @@ class NinePayController extends Controller
         if ($hashChecksum === $checksum) {
             $response_data = json_decode($this->urlsafeB64Decode($result));
 
-            $va_transaction =  VirtualAccountTransaction::query()
-                ->where('invoice_no', $response_data->invoice_no)
-                ->first();
+            if(isset($response_data->invoice_no) && $response_data->invoice_no){
+                $va_transaction =  VirtualAccountTransaction::query()
+                    ->where('invoice_no', $response_data->invoice_no)
+                    ->first();
 
-            $va_transaction->payment_status = VirtualAccount::PAYMENT_SUCCESSFUL;
-            $va_transaction->save();
+                $va_transaction->payment_status = VirtualAccount::PAYMENT_SUCCESSFUL;
+                $va_transaction->save();
 
-            NotificationUserJob::dispatch(
-                $va_transaction->user_id,
-                "Thanh toán thành công",
-                'Thanh toán thành công',
-                VirtualAccount::PAYMENT_SUCCESS,
-                NotiUserDefineCode::USER_NORMAL,
-                $va_transaction->invoice_no
-            );
+                User::query()
+                    ->where('id', $request->user->id)
+                    ->update([
+                        'golden_coin'=> $request->user->golden_coin + $response_data->amount,
+                    ]);
+
+                NotificationUserJob::dispatch(
+                    $va_transaction->user_id,
+                    "Thanh toán thành công",
+                    'Thanh toán thành công',
+                    VirtualAccount::PAYMENT_SUCCESS,
+                    NotiUserDefineCode::USER_NORMAL,
+                    $va_transaction->invoice_no
+                );
+            }
+
         }
 
         Log::info("Post Callback");

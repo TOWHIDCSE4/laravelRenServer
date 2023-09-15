@@ -3,15 +3,19 @@
 namespace App\Http\Controllers\Api\Admin;
 
 use App\Helper\Helper;
+use App\Helper\NotiUserDefineCode;
 use App\Helper\ParamUtils;
 use App\Helper\RenterType;
 use App\Helper\ResponseUtils;
 use App\Helper\StatusContractDefineCode;
+use App\Helper\StatusWithdrawalDefineCode;
+use App\Helper\TypeFCM;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\PaymentMethod\lib\HMACSignature;
 use App\Http\Controllers\PaymentMethod\lib\MessageBuilder;
 use App\Http\Controllers\PaymentMethod\NinePayController;
 use App\Http\Resources\Api\WalletTransaction\WalletTransactionCollection;
+use App\Jobs\NotificationUserJob;
 use App\Models\MsgCode;
 use App\Models\User;
 use App\Models\VirtualAccount;
@@ -110,6 +114,10 @@ class WalletTransactionController extends Controller
     //edit Wallet Withdrow
     public function editWalletWithdrow($wallet_transaction_id, Request $request)
     {
+        $user = DB::table('users')
+            ->where('id', $request->user->id)
+            ->first();
+
         if ($request->withdraw_money == null || empty($request->withdraw_money)) {
             return ResponseUtils::json([
                 'code' => Response::HTTP_BAD_REQUEST,
@@ -130,6 +138,41 @@ class WalletTransactionController extends Controller
             ]);
         }
 
+        if ($request->status == StatusWithdrawalDefineCode::APPROVED) {
+            return ResponseUtils::json([
+                'code' => Response::HTTP_BAD_REQUEST,
+                'success' => false,
+                'msg_code' => MsgCode::INVALID_REQUEST_WITHDRAWAL_STATUS[0],
+                'msg' => MsgCode::INVALID_REQUEST_WITHDRAWAL_STATUS[1]
+            ]);
+        }
+        if ($wallet_transaction->status == StatusWithdrawalDefineCode::APPROVED) {
+            return ResponseUtils::json([
+                'code' => Response::HTTP_BAD_REQUEST,
+                'success' => false,
+                'msg_code' => MsgCode::REQUEST_WITHDRAWAL_HAS_APPROVED[0],
+                'msg' => MsgCode::REQUEST_WITHDRAWAL_HAS_APPROVED[1]
+            ]);
+        }
+
+        if ($request->withdraw_money > $user->golden_coin) {
+            return ResponseUtils::json([
+                'code' => Response::HTTP_BAD_REQUEST,
+                'success' => false,
+                'msg_code' => MsgCode::WITHDRAWAL_MONEY_CANNOT_GREATER_THAN_BALANCE[0],
+                'msg' => MsgCode::WITHDRAWAL_MONEY_CANNOT_GREATER_THAN_BALANCE[1]
+            ]);
+        }
+
+        if ($request->withdraw_money < 0) {
+            return ResponseUtils::json([
+                'code' => Response::HTTP_BAD_REQUEST,
+                'success' => false,
+                'msg_code' => MsgCode::INVALID_MONEY[0],
+                'msg' => MsgCode::INVALID_MONEY[1]
+            ]);
+        }
+
         DB::beginTransaction();
         try {
             $response = $wallet_transaction->update([
@@ -140,6 +183,15 @@ class WalletTransactionController extends Controller
                 "withdraw_trading_code" => $request->withdraw_trading_code ?? $wallet_transaction->withdraw_trading_code,
                 "withdraw_content" => $request->withdraw_content ?? $wallet_transaction->withdraw_content,
             ]);
+
+            $remaining_golden_coin = $request->user->golden_coin + $wallet_transaction->withdraw_money  - $request->withdraw_money;
+            User::query()
+                ->where('id', $request->user->id)
+                ->update([
+                    'golden_coin'=> $remaining_golden_coin,
+                ]);
+
+
             DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
@@ -268,13 +320,13 @@ class WalletTransactionController extends Controller
             } else {
 
                 $time = time();
-                $total_amount =  $deposit_money + $virtual_account->request_amount;
+//                $total_amount =  $deposit_money + $virtual_account->request_amount;
                 $virtual_account_param = [
                     "request_id" => $virtual_account->request_id,
                     "uid" => $user_id,
                     "uname" => $ninePayController::UNAME,
                     "bank_code" => $request->bank_code,
-                    "request_amount" => $total_amount,
+//                    "request_amount" => $total_amount,
                 ];
 
                 $message = MessageBuilder::instance()
@@ -322,11 +374,7 @@ class WalletTransactionController extends Controller
                 "type" => WalletTransaction::DEPOSIT,
             ]);
 
-            User::query()
-                ->where('id', $request->user->id)
-                ->update([
-                    'golden_coin'=> $request->user->golden_coin + $deposit_money,
-                ]);
+
 
             DB::commit();
         } catch (Exception $e) {
@@ -347,12 +395,25 @@ class WalletTransactionController extends Controller
     //create Wallet Withdraws
     public function createWalletWithdraws(Request $request)
     {
+        $user = DB::table('users')
+            ->where('id', $request->user->id)
+            ->first();
+
         if ($request->withdraw_money == null || empty($request->withdraw_money)) {
             return ResponseUtils::json([
                 'code' => Response::HTTP_BAD_REQUEST,
                 'success' => false,
                 'msg_code' => MsgCode::WITHDRAW_MONEY_IS_REQUIRED[0],
                 'msg' => MsgCode::WITHDRAW_MONEY_IS_REQUIRED[1],
+            ]);
+        }
+
+        if ($request->withdraw_money > $user->golden_coin) {
+            return ResponseUtils::json([
+                'code' => Response::HTTP_BAD_REQUEST,
+                'success' => false,
+                'msg_code' => MsgCode::WITHDRAWAL_MONEY_CANNOT_GREATER_THAN_BALANCE[0],
+                'msg' => MsgCode::WITHDRAWAL_MONEY_CANNOT_GREATER_THAN_BALANCE[1]
             ]);
         }
 
@@ -371,6 +432,21 @@ class WalletTransactionController extends Controller
                 "type" => WalletTransaction::WITHDRAW,
             ]);
 
+            $remaining_golden_coin = $request->user->golden_coin - $request->withdraw_money;
+            User::query()
+                ->where('id', $request->user->id)
+                ->update([
+                    'golden_coin'=> $remaining_golden_coin,
+                ]);
+
+            NotificationUserJob::dispatch(
+                null,
+                "Yêu cầu rút tiền mới",
+                'Yêu cầu rút tiền mới từ người dùng ' . $request->user->name,
+                TypeFCM::NEW_REQUEST_WITHDRAWAL,
+                NotiUserDefineCode::USER_IS_ADMIN,
+                $wallet_transaction_created->id
+            );
 
             DB::commit();
         } catch (Exception $e) {
